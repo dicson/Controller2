@@ -1,0 +1,21 @@
+{
+  "files": [
+    "actions.h",
+    "fonts.h",
+    "images.c",
+    "images.h",
+    "screens.c",
+    "screens.h",
+    "structs.h",
+    "styles.c",
+    "styles.h",
+    "ui.c",
+    "ui.h",
+    "ui_font_ubuntu_20.c",
+    "ui_image_oil.c",
+    "ui_image_osmos.c",
+    "ui_image_pump.c",
+    "ui_image_revers.c",
+    "vars.h"
+  ]
+}
