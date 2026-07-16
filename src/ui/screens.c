@@ -4724,7 +4724,7 @@ void create_screen_main() {
                                             lv_qrcode_set_size(obj, 160);
                                             lv_qrcode_set_dark_color(obj, lv_color_hex(0x20429f));
                                             lv_qrcode_set_light_color(obj, lv_color_hex(0xe2f5fe));
-                                            lv_qrcode_update(obj, "https://github.com/dicson/Pumps-lsd-controller/releases/latest", 62);
+                                            lv_qrcode_update(obj, "https://github.com/dicson/Controller2/releases/latest", 53);
                                             lv_obj_add_flag(obj, LV_OBJ_FLAG_CLICKABLE);
                                         }
                                         {

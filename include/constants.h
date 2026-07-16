@@ -36,5 +36,5 @@ static constexpr uint16_t MIN_GFX_BL_TIME = 10;
 static constexpr uint16_t SCREEN_ANIM_DURATION_MS = 1000;
 
 constexpr uint32_t ZONE_BAR_COLOR_DW = 0x0000CB; // тёмно-синий (грязная вода)
-constexpr const char *VERSION = "Текущая версия прошивки - 2.4";
+constexpr const char *VERSION = "Текущая версия прошивки - 1.0";
 #endif
