@@ -265,6 +265,18 @@ void update_zone_bar_style(lv_obj_t *bar, int zone)
  */
 void update_progress_time_label(uint32_t prog_pass_ms)
 {
+    static uint32_t last_label_update = 0;
+    if (millis() - last_label_update < 1000)
+        return;
+    last_label_update = millis();
+
+    uint32_t allSeconds = prog_pass_ms / 1000;
+    int8_t H = (allSeconds / 3600) % 24;
+    int8_t M = (allSeconds / 60) % 60;
+    int8_t S = allSeconds % 60;
+
+    lv_label_set_text_fmt(objects.bar_label, "%d:%02d:%02d / %d:%02d:%02d",
+                          H, M, S, thisH, thisM, thisS);
 }
 
 /**
@@ -521,22 +533,19 @@ void handle_tank_pause(bool tank_is_empty)
             lv_bar_set_range(objects.pause_bar, 0, (uint64_t)water_pause * MS_PER_SECOND * minutes);
         }
     }
-    else
+    if (is_paused && !hand_paused)
     {
-        if (is_paused && !hand_paused)
-        {
-            uint32_t pause_ms = (uint64_t)water_pause * MS_PER_SECOND * minutes;
-            uint32_t pause_pass = millis() - program_pause_timer;
+        uint32_t pause_ms = (uint64_t)water_pause * MS_PER_SECOND * minutes;
+        uint32_t pause_pass = millis() - program_pause_timer;
 
-            if (pause_pass >= pause_ms)
-            {
-                is_paused = false;
-                program_resume();
-                lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
-            }
-            else
-                update_tank_pause_ui(pause_ms, pause_pass);
+        if (pause_pass >= pause_ms)
+        {
+            is_paused = false;
+            program_resume();
+            lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
         }
+        else
+            update_tank_pause_ui(pause_ms, pause_pass);
     }
 }
 
