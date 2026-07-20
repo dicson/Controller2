@@ -113,9 +113,7 @@ uint32_t getDirtyWaterDurationMs(int zone)
 void periodTick()
 {
     for (byte i = 0; i < PUMP_AMOUNT; i++)
-    { // пробегаем по всем помпам
-        // if (millis() - zoneTimer < water_pause * 1000 * minutes)
-        //     break;               // если пауза не закончилась - выход из цикла
+    {                            // пробегаем по всем помпам
         if (dw_time[i] > 0       // если грязная вода не ноль
             && !pump_finished[i] // если зона еще не поливалась
             && !now_pumping)     // если никакая зона не включена
@@ -126,13 +124,6 @@ void periodTick()
             now_pumping = true;           // идет полив
             zone_on(i);
         }
-        // ------------------переключение воды с грязной на чистую
-        // uint32_t dw_t = getDirtyWaterDurationMs(i);
-        // if (dw_time[i] > 0 && millis() - pump_timers[i] >= dw_t // если время полива грязной вышло
-        //     && pump_state[i] == SWITCH_LEVEL                    // если зона поливается в данный момент
-        //     && cw_time[i] > 0                                   // если время чистой воды больше нуля
-        //     && (dryState))                                      // если включена грязная
-        //     clear_water_on();
     }
 }
 
@@ -225,8 +216,6 @@ void send_status_to_pult(struct_message_pult msg)
 
 /**
  * @brief Настраивает 3-сегментный градиент индикатора зоны в зависимости от настроек.
- * Фазы: Покой -> Насос активен -> Покой.
- * Точки перехода рассчитываются динамически на основе pump_active_pct.
  */
 void update_zone_bar_style(lv_obj_t *bar, int zone)
 {
@@ -276,18 +265,6 @@ void update_zone_bar_style(lv_obj_t *bar, int zone)
  */
 void update_progress_time_label(uint32_t prog_pass_ms)
 {
-    static uint32_t last_label_update = 0;
-    if (millis() - last_label_update < 1000)
-        return;
-    last_label_update = millis();
-
-    uint32_t allSeconds = prog_pass_ms / 1000;
-    int8_t H = (allSeconds / 3600) % 24;
-    int8_t M = (allSeconds / 60) % 60;
-    int8_t S = allSeconds % 60;
-
-    lv_label_set_text_fmt(objects.bar_label, "%d:%02d:%02d / %d:%02d:%02d",
-                          H, M, S, thisH, thisM, thisS);
 }
 
 /**
@@ -452,13 +429,11 @@ void pump_control_tick()
 
 /**
  * @brief Приостанавливает программу полива.
- * Сохраняет время начала паузы, выключает текущую активную зону и водяной насос.
  */
 void program_pause()
 {
     if (!now_pumping)
         return;
-    // Визуализация паузы: меняем текст и цвет кнопки
     lv_label_set_text(objects.pause_btn_label, " Продолжить");
     lv_obj_set_style_bg_color(objects.pause_btn, lv_palette_main(LV_PALETTE_ORANGE), LV_PART_MAIN);
     lv_obj_set_style_bg_color(objects.prog_bar, lv_palette_main(LV_PALETTE_ORANGE), LV_PART_INDICATOR);
@@ -469,14 +444,11 @@ void program_pause()
 
 /**
  * @brief Возобновляет программу полива.
- * Корректирует таймеры текущей зоны и общее время старта с учетом длительности паузы,
- * затем снова включает активную зону.
  */
 void program_resume()
 {
     if (!now_pumping)
         return;
-    // Визуализация активного состояния
     lv_label_set_text(objects.pause_btn_label, " Пауза");
     lv_obj_remove_local_style_prop(objects.pause_btn, LV_STYLE_BG_COLOR, LV_PART_MAIN);
     lv_obj_remove_local_style_prop(objects.prog_bar, LV_STYLE_BG_COLOR, LV_PART_INDICATOR);
@@ -486,61 +458,39 @@ void program_resume()
 }
 
 /**
- * @brief
+ * @brief Опрос датчика уровня воды с антидребезгом.
+ * @return true, если бак пуст, иначе false.
  */
-void check_tank_sensor()
+bool update_tank_sensor_debounced()
 {
     static bool lastState = LOW;
     static bool stableState = HIGH;
     static unsigned long lastDebounceTime = 0;
 
     bool currentState = digitalRead(limitSwitchPin);
-    // Если состояние изменилось (из-за помехи или нажатия)
-    if (currentState != lastState)
-        lastDebounceTime = millis(); // Сбрасываем таймер
 
-    // Если состояние удерживается дольше, чем debounceDelay
+    if (currentState != lastState)
+    {
+        lastDebounceTime = millis();
+    }
+
     if ((millis() - lastDebounceTime) > debounceDelay)
     {
         if (currentState != stableState)
         {
             stableState = currentState;
-            if (stableState == LOW)
-            {
-                Serial.println("Концевик СРАБОТАЛ (Замкнут на GND)");
-                tank_empty = false;
-                lv_obj_add_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
-            }
-            else
-            {
-                Serial.println("Концевик ОТПУЩЕН");
-                tank_empty = true;
-                lv_obj_remove_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
-                if (now_pumping && !is_paused && !hand_paused)
-                {
-                    is_paused = true;
-                    program_pause();
-                    lv_obj_remove_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
-                    lv_bar_set_range(objects.pause_bar, 0, (uint64_t)water_pause * MS_PER_SECOND * minutes);
-                }
-            }
         }
-    }
-    lastState = currentState;
-    if (!is_paused || hand_paused)
-        return;
-    uint32_t pause_ms = (uint64_t)water_pause * MS_PER_SECOND * minutes;
-    uint32_t pause_pass = millis() - program_pause_timer;
-    if (pause_pass >= pause_ms)
-    {
-        if (!tank_empty)
-        {
-            is_paused = false;
-            program_resume();
-        }
-        lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
     }
 
+    lastState = currentState;
+    return (stableState == HIGH); // true, если бак пуст
+}
+
+/**
+ * @brief Обновление UI во время паузы (таймер).
+ */
+void update_tank_pause_ui(uint32_t pause_ms, uint32_t pause_pass)
+{
     static uint32_t last_label_update = 0;
     if (millis() - last_label_update < 1000)
         return;
@@ -553,6 +503,58 @@ void check_tank_sensor()
     lv_label_set_text_fmt(objects.tank_time, "%d:%02d:%02d",
                           H, M, S);
     lv_bar_set_value(objects.pause_bar, pause_pass, LV_ANIM_OFF);
+}
+
+/**
+ * @brief Управление паузой полива при пустом баке.
+ * @param tank_is_empty Текущее состояние датчика бака.
+ */
+void handle_tank_pause(bool tank_is_empty)
+{
+    if (tank_is_empty)
+    {
+        if (now_pumping && !is_paused && !hand_paused)
+        {
+            is_paused = true;
+            program_pause();
+            lv_obj_remove_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
+            lv_bar_set_range(objects.pause_bar, 0, (uint64_t)water_pause * MS_PER_SECOND * minutes);
+        }
+    }
+    else
+    {
+        if (is_paused && !hand_paused)
+        {
+            uint32_t pause_ms = (uint64_t)water_pause * MS_PER_SECOND * minutes;
+            uint32_t pause_pass = millis() - program_pause_timer;
+
+            if (pause_pass >= pause_ms)
+            {
+                is_paused = false;
+                program_resume();
+                lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
+            }
+            else
+                update_tank_pause_ui(pause_ms, pause_pass);
+        }
+    }
+}
+
+/**
+ * @brief Основная функция опроса и обработки состояния датчика бака.
+ */
+void check_tank_sensor()
+{
+    bool tank_is_empty = update_tank_sensor_debounced();
+
+    // Обновление глобального состояния и UI
+    tank_empty = tank_is_empty;
+    if (tank_empty)
+        lv_obj_remove_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
+    else
+        lv_obj_add_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
+
+    handle_tank_pause(tank_is_empty);
 }
 
 /**
