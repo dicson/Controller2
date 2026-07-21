@@ -468,6 +468,7 @@ void action_zone_selected(lv_event_t *e)
         lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
         lv_obj_remove_flag(objects.spinner, LV_OBJ_FLAG_HIDDEN);
         lv_obj_remove_flag(objects.prog_bar, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_remove_flag(objects.pause_btn, LV_OBJ_FLAG_HIDDEN);
 
         for (byte i = 0; i < PUMP_AMOUNT; i++)
         {
