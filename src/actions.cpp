@@ -270,7 +270,7 @@ void action_stop(lv_event_t *e)
         if (!lv_obj_is_checkable(zone_button))
         {
             lv_obj_t *check_box = lv_obj_get_child(zone_button, 1);
-            lv_obj_set_click(check_box, true);
+            lv_obj_set_clickable(check_box, true);
             lv_obj_remove_state(check_box, LV_STATE_CHECKED);
         }
         pump_finished[i] = true;
@@ -286,9 +286,9 @@ void action_stop(lv_event_t *e)
     lv_obj_set_hidden(objects.tab_2, false);
     lv_obj_set_hidden(objects.tab_settings, false);
     lv_obj_clear_state(objects.start, LV_STATE_DISABLED);
-    lv_obj_add_flag(objects.spinner, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.pause_btn, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.spinner, true);
+    lv_obj_set_hidden(objects.pause_btn, true);
+    lv_obj_set_hidden(objects.tank, true);
     update_zone_list();
     if (is_paused)
     {
@@ -304,7 +304,7 @@ void action_pause_btn(lv_event_t *e)
 {
     if (tank_empty)
         return;
-    lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.tank, true);
     is_paused = !is_paused;
     if (is_paused)
     {
@@ -453,7 +453,7 @@ void action_zone_selected(lv_event_t *e)
 {
     lv_obj_t *zone_button = lv_event_get_current_target_obj(e);
     int32_t zone_num = lv_obj_get_index(zone_button);
-    lv_obj_set_click(lv_event_get_target_obj(e), false);
+    lv_obj_set_clickable(lv_event_get_target_obj(e), false);
 
     pump_finished[zone_num] = false;
 
@@ -487,11 +487,11 @@ void action_zone_selected(lv_event_t *e)
         lv_obj_t *bar = lv_obj_get_child(objects.bars_panel, i);
         if (dw_time[i] > 0 && pump_finished[i] == false)
         {
-            lv_obj_remove_flag(bar, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(bar, false);
         }
         else
         {
-            lv_obj_add_flag(bar, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(bar, true);
         }
     }
 
@@ -502,10 +502,10 @@ void action_zone_time_clicked(lv_event_t *e)
 {
     g_selected_zone_btn = lv_event_get_current_target_obj(e); // зона
     water_num = lv_obj_get_index(lv_event_get_target_obj(e));
-    if (lv_obj_has_flag(objects.keyboard, LV_OBJ_FLAG_HIDDEN))
+    if (lv_obj_is_hidden(objects.keyboard))
     {
-        lv_obj_remove_flag(objects.keyboard, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_remove_flag(objects.input_area, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.keyboard, false);
+        lv_obj_set_hidden(objects.input_area, false);
         lv_obj_add_state(objects.input_area, LV_STATE_FOCUSED);
     }
 }
@@ -520,8 +520,8 @@ void action_input_done(lv_event_t *e)
         txt = "0";
     }
 
-    lv_obj_add_flag(objects.keyboard, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.input_area, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.keyboard, true);
+    lv_obj_set_hidden(objects.input_area, true);
 
     settings.begin("Settings", RW_MODE);
     int zone_num = (int)lv_obj_get_index(g_selected_zone_btn);
