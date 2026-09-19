@@ -7,6 +7,7 @@
 #include <freertos/queue.h>
 #include "lora.h"
 #include "auto_pumps.h"
+#include <lgfx_user/LGFX_Sunton_ESP32-8048S070.h>
 
 int current_zone = 255;
 bool pump_water_state;
@@ -19,6 +20,7 @@ uint32_t program_pause_timer;
 TaskHandle_t pultTaskHandle = NULL;
 const int limitSwitchPin = 18;          // Ваш пин, куда подключен OUT модуля
 const unsigned long debounceDelay = 50; // Время фильтрации (мс)
+extern LGFX lcd;
 
 void send_message_to_pult(void *pvParameters);
 
@@ -356,7 +358,7 @@ void handle_messages()
                 if (!system_error_state)
                 {
                     system_error_state = true;
-                    analogWrite(2, 70); // Снижаем яркость подсветки
+                    lcd.setBrightness(70); // Снижаем яркость подсветки
 
                     // Пытаемся найти метку внутри контейнера message_box и обновить текст
                     lv_obj_t *label = lv_obj_get_child(objects.message_box, 0);

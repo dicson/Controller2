@@ -63,18 +63,13 @@ void update_zone_list()
         lv_obj_t *button = lv_obj_get_child(objects.tab_1, i);
         lv_obj_t *checkbox = lv_obj_get_child(button, 1);
 
+        lv_obj_set_hidden(bar, dw_time[i] == 0);
+        lv_obj_set_hidden(checkbox, dw_time[i] == 0);
+
         if (dw_time[i] != 0)
-        {
-            lv_obj_set_hidden(bar, false);
             lv_obj_set_style_bg_opa(button, FULL_OPACITY, LV_PART_MAIN);
-            lv_obj_set_hidden(checkbox, false);
-        }
         else
-        {
-            lv_obj_set_hidden(bar, true);
             lv_obj_set_style_bg_opa(button, LOW_OPACITY, LV_PART_MAIN);
-            lv_obj_set_hidden(checkbox, true);
-        }
     }
 }
 
@@ -130,10 +125,7 @@ void action_plant_food(lv_event_t *e)
 void action_use_pult(lv_event_t *e)
 {
     use_pult = lv_obj_has_state(objects.pult, LV_STATE_CHECKED);
-    if (use_pult)
-        lv_obj_set_hidden(objects.esp_lora, false);
-    else
-        lv_obj_set_hidden(objects.esp_lora, true);
+    lv_obj_set_hidden(objects.esp_lora, !use_pult);
     settings.begin("Settings", RW_MODE);
     settings.putBool("use_pult", use_pult);
     settings.end();
@@ -486,13 +478,9 @@ void action_zone_selected(lv_event_t *e)
     {
         lv_obj_t *bar = lv_obj_get_child(objects.bars_panel, i);
         if (dw_time[i] > 0 && pump_finished[i] == false)
-        {
             lv_obj_set_hidden(bar, false);
-        }
         else
-        {
             lv_obj_set_hidden(bar, true);
-        }
     }
 
     lv_bar_set_range(objects.prog_bar, 0, programm_time);
