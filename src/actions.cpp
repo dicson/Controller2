@@ -104,7 +104,9 @@ void action_revert_display(lv_event_t *e)
 
 void action_debug(lv_event_t *e)
 {
-    if (lv_obj_has_state(objects.debug, LV_STATE_CHECKED))
+    bool debug = lv_obj_has_state(objects.debug, LV_STATE_CHECKED);
+    lv_obj_set_hidden(objects.debug_label, !debug);
+    if (debug)
         minutes = DEBUG_TIME_MINUTES;
     else
         minutes = REAL_TIME_MINUTES;
@@ -113,10 +115,6 @@ void action_debug(lv_event_t *e)
 void action_plant_food(lv_event_t *e)
 {
     plant_food = lv_obj_has_state(objects.plant_food, LV_STATE_CHECKED);
-    // if (plant_food)
-    //     lv_obj_remove_flag(objects.esp_lora, LV_OBJ_FLAG_HIDDEN);
-    // else
-    //     lv_obj_add_flag(objects.esp_lora, LV_OBJ_FLAG_HIDDEN);
     settings.begin("Settings", RW_MODE);
     settings.putBool("plant_food", plant_food);
     settings.end();

@@ -1388,6 +1388,16 @@ void create_screen_main() {
                                 }
                             }
                         }
+                        {
+                            // debug_label
+                            lv_obj_t *obj = lv_label_create(parent_obj);
+                            objects.debug_label = obj;
+                            lv_obj_set_pos(obj, 421, 350);
+                            lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                            lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
+                            lv_obj_set_style_text_color(obj, lv_color_darken(lv_color_hex(0xff0000), 0), LV_PART_MAIN | LV_STATE_DEFAULT);
+                            lv_label_set_text_static(obj, "РЕЖИМ ОТЛАДКИ");
+                        }
                     }
                 }
                 {
@@ -4900,6 +4910,7 @@ void delete_screen_main() {
     objects.pause_btn = 0;
     objects.pause_btn_label = 0;
     objects.tank_empty = 0;
+    objects.debug_label = 0;
     objects.tab_1 = 0;
     objects.obj36 = 0;
     objects.obj37 = 0;

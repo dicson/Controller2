@@ -115,6 +115,7 @@ typedef struct _objects_t {
     lv_obj_t *pause_btn;
     lv_obj_t *pause_btn_label;
     lv_obj_t *tank_empty;
+    lv_obj_t *debug_label;
     lv_obj_t *tab_1;
     lv_obj_t *obj36;
     lv_obj_t *obj37;

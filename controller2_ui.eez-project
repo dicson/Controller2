@@ -553,7 +553,8 @@
                           "text": "",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -759,7 +760,8 @@
                               "text": "Стоп",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -868,7 +870,8 @@
                               "text": "Старт",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -1058,7 +1061,8 @@
                               "text": "Подкормка",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "119d2ed3-ecf2-443c-8fc4-b23bc0a4bc6a",
@@ -1202,7 +1206,8 @@
                               "text": "Наполняем бочку",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "66ff69d6-4b73-4a11-9cd5-9ecfaadc04c3",
@@ -1245,7 +1250,8 @@
                               "text": "time",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "7a6b4f9d-5d23-44d9-f4a2-5da41de5d45b",
@@ -1460,7 +1466,8 @@
                               "text": "ЗОНА  1",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -1587,7 +1594,8 @@
                               "text": "ЗОНА  2",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -1714,7 +1722,8 @@
                               "text": "ЗОНА  3",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -1841,7 +1850,8 @@
                               "text": "ЗОНА  4",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -1968,7 +1978,8 @@
                               "text": "ЗОНА  5",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2095,7 +2106,8 @@
                               "text": "ЗОНА  6",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2222,7 +2234,8 @@
                               "text": "ЗОНА  7",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2349,7 +2362,8 @@
                               "text": "ЗОНА  8",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2476,7 +2490,8 @@
                               "text": "ЗОНА  9",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2603,7 +2618,8 @@
                               "text": "ЗОНА 10",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2730,7 +2746,8 @@
                               "text": "ЗОНА 11",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2857,7 +2874,8 @@
                               "text": "ЗОНА 12",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2984,7 +3002,8 @@
                               "text": "ЗОНА 13",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3111,7 +3130,8 @@
                               "text": "ЗОНА 14",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3238,7 +3258,8 @@
                               "text": "ЗОНА 15",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3365,7 +3386,8 @@
                               "text": "ЗОНА 16",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3492,7 +3514,8 @@
                               "text": "ЗОНА 17",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3619,7 +3642,8 @@
                               "text": "ЗОНА 18",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3746,7 +3770,8 @@
                               "text": "ЗОНА 19",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -3873,7 +3898,8 @@
                               "text": "ЗОНА 20",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4000,7 +4026,8 @@
                               "text": "ЗОНА 21",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4127,7 +4154,8 @@
                               "text": "ЗОНА 22",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4254,7 +4282,8 @@
                               "text": "ЗОНА 23",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4381,7 +4410,8 @@
                               "text": "ЗОНА 24",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4508,7 +4538,8 @@
                               "text": "ЗОНА 25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4635,7 +4666,8 @@
                               "text": "ЗОНА 26",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4762,7 +4794,8 @@
                               "text": "ЗОНА 27",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -4889,7 +4922,8 @@
                               "text": "ЗОНА 28",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5016,7 +5050,8 @@
                               "text": "ЗОНА 29",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5143,7 +5178,8 @@
                               "text": "ЗОНА 30",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5270,7 +5306,8 @@
                               "text": "ЗОНА 31",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5422,7 +5459,8 @@
                           "text": "",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5566,7 +5604,8 @@
                                   "text": "100",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 },
                                 {
                                   "objID": "e83a2423-a1cb-4802-f1b6-b1aceb11170d",
@@ -5609,7 +5648,8 @@
                                   "text": "%",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5681,7 +5721,8 @@
                               "text": "Коэфф.",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5831,7 +5872,8 @@
                           "text": "-10",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -5946,7 +5988,8 @@
                           "text": "-1",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6104,7 +6147,8 @@
                           "text": "100",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6219,7 +6263,8 @@
                           "text": "+1",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6334,7 +6379,8 @@
                           "text": "+10",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6440,7 +6486,8 @@
                           "text": "Пауза",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6524,7 +6571,8 @@
                           "text": "Бочка пуста!",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6555,6 +6603,58 @@
                       },
                       "group": "",
                       "groupIndex": 0
+                    },
+                    {
+                      "objID": "a85201b1-9c66-4751-ba55-99ca22845e7f",
+                      "type": "LVGLLabelWidget",
+                      "left": 421,
+                      "top": 350,
+                      "width": 130,
+                      "height": 22,
+                      "customInputs": [],
+                      "customOutputs": [],
+                      "style": {
+                        "objID": "d5ba1740-84ab-43eb-855e-f7b45b3adad2",
+                        "useStyle": "default",
+                        "conditionalStyles": [],
+                        "childStyles": []
+                      },
+                      "timeline": [],
+                      "eventHandlers": [],
+                      "identifier": "debug_label",
+                      "leftUnit": "px",
+                      "topUnit": "px",
+                      "widthUnit": "content",
+                      "heightUnit": "content",
+                      "children": [],
+                      "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                      "hiddenFlag": true,
+                      "hiddenFlagType": "literal",
+                      "clickableFlagType": "literal",
+                      "flagScrollbarMode": "",
+                      "flagScrollDirection": "",
+                      "scrollSnapX": "",
+                      "scrollSnapY": "",
+                      "checkedStateType": "literal",
+                      "disabledStateType": "literal",
+                      "states": "",
+                      "localStyles": {
+                        "objID": "53fdbd2f-0550-41f7-cabc-de00e41ac38f",
+                        "definition": {
+                          "MAIN": {
+                            "DEFAULT": {
+                              "text_color": "darken(#ff0000, 0%)"
+                            }
+                          }
+                        }
+                      },
+                      "group": "",
+                      "groupIndex": 0,
+                      "text": "РЕЖИМ ОТЛАДКИ",
+                      "textType": "literal",
+                      "longMode": "WRAP",
+                      "recolor": false,
+                      "useStaticText": true
                     }
                   ],
                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6690,7 +6790,8 @@
                           "text": "1",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "b857832c-0285-48d5-a5fe-3515a41ab872",
@@ -6732,7 +6833,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6845,7 +6947,8 @@
                           "text": "2",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "d5d18234-a3d0-45e9-83ec-72b46a8e9992",
@@ -6888,7 +6991,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -6999,7 +7103,8 @@
                           "text": "3",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "78bb06f3-abeb-474e-8774-1acfc7bf6104",
@@ -7041,7 +7146,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -7152,7 +7258,8 @@
                           "text": "4",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "3a71deff-fefd-4100-f605-45ea4bb64079",
@@ -7194,7 +7301,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -7305,7 +7413,8 @@
                           "text": "5",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "03eb9806-a74b-4fdb-9749-4635c855fe79",
@@ -7347,7 +7456,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -7459,7 +7569,8 @@
                           "text": "6",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "eca92020-c05b-4cdb-c288-6909f4bff7f5",
@@ -7501,7 +7612,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -7613,7 +7725,8 @@
                           "text": "7",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "b5c583dd-8239-4faa-ecec-fe08885ac86e",
@@ -7655,7 +7768,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -7767,7 +7881,8 @@
                           "text": "8\n",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "70d8f63f-2657-4044-efc5-d14fe46b344d",
@@ -7809,7 +7924,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -7922,7 +8038,8 @@
                           "text": "9",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "841b492e-c230-4389-e4ca-ff694d46804a",
@@ -7964,7 +8081,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -8077,7 +8195,8 @@
                           "text": "10",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "0052fb65-2764-4457-d9e0-1a8353477824",
@@ -8120,7 +8239,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -8231,7 +8351,8 @@
                           "text": "11",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "89d4ba03-a6e5-4d7d-b797-27bede2c6103",
@@ -8273,7 +8394,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -8384,7 +8506,8 @@
                           "text": "12",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "b3df0968-2312-4c19-e8f0-c300bd8d0e87",
@@ -8426,7 +8549,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -8537,7 +8661,8 @@
                           "text": "13",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "8564cc12-e52f-4025-8b12-4b4f52383c49",
@@ -8579,7 +8704,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -8691,7 +8817,8 @@
                           "text": "14",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "93809ffb-1c12-46d3-e4ad-ef47cdae4d60",
@@ -8733,7 +8860,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -8845,7 +8973,8 @@
                           "text": "15",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "4fbf5ef8-fa3f-4176-c9a8-bd586382e485",
@@ -8887,7 +9016,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9000,7 +9130,8 @@
                           "text": "16",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "3afd6447-06d7-461c-fb01-a27a9dc5a42c",
@@ -9042,7 +9173,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9156,7 +9288,8 @@
                           "text": "17",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "6a69f962-1104-468c-d772-4669155786fc",
@@ -9198,7 +9331,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9311,7 +9445,8 @@
                           "text": "18",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "1df77087-9582-4fec-e3be-ef482bf5a67f",
@@ -9354,7 +9489,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9465,7 +9601,8 @@
                           "text": "19",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "1c605a3d-3040-4857-adba-f7372769e8c1",
@@ -9507,7 +9644,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9618,7 +9756,8 @@
                           "text": "20",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "aa21b100-e07f-4f1f-b430-657f854d826d",
@@ -9660,7 +9799,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9771,7 +9911,8 @@
                           "text": "21",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "9442f062-2f83-4448-cf49-a00fbcd4e35c",
@@ -9813,7 +9954,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -9925,7 +10067,8 @@
                           "text": "22",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "c5a5fb4e-01ec-479d-9a74-95921d0acbe5",
@@ -9967,7 +10110,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -10079,7 +10223,8 @@
                           "text": "23",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "7cecfec9-86d2-43e5-ce86-1380205c39c6",
@@ -10121,7 +10266,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -10234,7 +10380,8 @@
                           "text": "24",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "20b85e5b-9773-4175-8bff-e03c7d43c062",
@@ -10276,7 +10423,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -10390,7 +10538,8 @@
                           "text": "25",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "a9a84ae2-94f4-4458-8c3c-694315a8e2fd",
@@ -10432,7 +10581,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -10545,7 +10695,8 @@
                           "text": "26",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "d089a307-e311-4d94-fc61-f2e63bfa00c9",
@@ -10587,7 +10738,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -10700,7 +10852,8 @@
                           "text": "27",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "a5962dd5-939c-46b7-aa9e-5b9da4f00e98",
@@ -10742,7 +10895,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -10855,7 +11009,8 @@
                           "text": "28",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "0aec4587-405f-4677-9f50-b5d1f7a684fa",
@@ -10897,7 +11052,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -11010,7 +11166,8 @@
                           "text": "29",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "d1388e52-aeb9-41a8-8547-66d7264f9594",
@@ -11052,7 +11209,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -11165,7 +11323,8 @@
                           "text": "30",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "02cfa509-7238-4064-8265-024cb4e7d1ed",
@@ -11207,7 +11366,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -11320,7 +11480,8 @@
                           "text": "31",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "e1fd076e-ceb3-4945-90a1-055d889d5326",
@@ -11362,7 +11523,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -11475,7 +11637,8 @@
                           "text": "32",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         },
                         {
                           "objID": "7d9e20f4-03f1-4077-faa3-1b257ad6bf22",
@@ -11517,7 +11680,8 @@
                           "group": "",
                           "groupIndex": 0,
                           "text": "поливать",
-                          "textType": "literal"
+                          "textType": "literal",
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -11714,7 +11878,8 @@
                               "text": "1",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "d0a7eed6-4c63-497e-96c6-3c77e7177f0c",
@@ -11770,7 +11935,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "3bc58cc1-e0ed-4561-9e7b-80c296c1cbbc",
@@ -11828,7 +11994,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -11940,7 +12107,8 @@
                               "text": "2",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "4e1e9359-02c9-4278-97ea-5a6dfe215bad",
@@ -11996,7 +12164,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "0bba3604-bef6-4dbb-bb8c-708ca73ce244",
@@ -12054,7 +12223,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -12166,7 +12336,8 @@
                               "text": "3",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "1c665a5e-68bd-40ef-bdc6-7bce4dbdfcf5",
@@ -12222,7 +12393,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "e1f7ecb7-5528-4c75-a777-aeeae9f000f9",
@@ -12280,7 +12452,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -12392,7 +12565,8 @@
                               "text": "4",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "e501e80a-c501-4bd2-8fbd-55130eab2dc9",
@@ -12448,7 +12622,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "f02081f4-6a6a-4e88-9b1e-c62ab2c3311d",
@@ -12506,7 +12681,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -12618,7 +12794,8 @@
                               "text": "5",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "d31eaf04-fbbb-4c0c-e6a4-429a60d458fc",
@@ -12674,7 +12851,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "8ca39a2a-e776-4a77-982a-9101854af66f",
@@ -12732,7 +12910,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -12844,7 +13023,8 @@
                               "text": "6",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "b5cfb993-598f-4b4f-8a4c-19ad15732b74",
@@ -12900,7 +13080,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "f7ba72ea-c9bc-429e-f96f-6f1775e7051e",
@@ -12958,7 +13139,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -13070,7 +13252,8 @@
                               "text": "7",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "a9e427a9-6829-4e30-ce06-67d3e4c1910e",
@@ -13126,7 +13309,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "e435bdc7-b418-4ccb-a799-e0964b0ed816",
@@ -13184,7 +13368,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -13296,7 +13481,8 @@
                               "text": "8",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "59583068-676b-46cb-e1f6-f04258b9676a",
@@ -13352,7 +13538,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "2b6ba444-e592-43f4-a047-fa506939d43c",
@@ -13410,7 +13597,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -13522,7 +13710,8 @@
                               "text": "9",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "eb3dc3e2-2b58-4674-bdb9-a2909efcce46",
@@ -13578,7 +13767,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "de025862-b5a1-4c12-dd33-5068c1a9ae9c",
@@ -13636,7 +13826,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -13749,7 +13940,8 @@
                               "text": "10",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "bdf2d399-2999-4388-d1e8-2d63d1bca9ac",
@@ -13805,7 +13997,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "68763af4-4296-4885-8d71-9efc3da0a906",
@@ -13863,7 +14056,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -13976,7 +14170,8 @@
                               "text": "11",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "770abbd9-8b1d-4206-b07e-a6333cd4975b",
@@ -14032,7 +14227,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "f83cf3fd-a278-42f7-92a8-1f0822d9c26a",
@@ -14090,7 +14286,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -14203,7 +14400,8 @@
                               "text": "12",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "09fcdd61-576f-431f-a6d9-aad1e757893a",
@@ -14259,7 +14457,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "a0f4a47f-f272-4b97-b91c-c66e4ab45da1",
@@ -14317,7 +14516,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -14430,7 +14630,8 @@
                               "text": "13",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "06c92daf-450d-400e-b9bb-091fc4a1b440",
@@ -14486,7 +14687,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "53ba38eb-47db-41e8-87a7-955d65f384c9",
@@ -14544,7 +14746,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -14657,7 +14860,8 @@
                               "text": "14",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "ee6e20ea-1ee0-4555-f6e5-b4a25d9d3a97",
@@ -14713,7 +14917,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "4877d2aa-bed0-4801-eecb-c0538ffef3ad",
@@ -14771,7 +14976,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -14884,7 +15090,8 @@
                               "text": "15",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "ba66eea5-c70e-4c80-ea04-ef1f3a285db3",
@@ -14940,7 +15147,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "8e24929d-1ae7-4ce4-f8c4-e4345057c01e",
@@ -14998,7 +15206,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -15112,7 +15321,8 @@
                               "text": "16",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "9d79f9ad-0535-42c1-cc70-49bb5c9e4ad3",
@@ -15168,7 +15378,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "6b120b95-6c23-4f2c-c2d9-7f7d1fc8c8ef",
@@ -15226,7 +15437,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -15340,7 +15552,8 @@
                               "text": "17",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "1989eaab-117a-4511-a126-97ba9f35205e",
@@ -15396,7 +15609,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "5482219b-52bd-4ec6-bbd6-0729a7ca5a0f",
@@ -15454,7 +15668,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -15568,7 +15783,8 @@
                               "text": "18",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "43b1608d-32b6-4ce5-fefb-676a40500d26",
@@ -15624,7 +15840,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "dd030ed6-0997-4233-800f-2ef1e4c91084",
@@ -15682,7 +15899,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -15796,7 +16014,8 @@
                               "text": "19",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "2a9601b4-1905-422c-d66e-acba76fc0edc",
@@ -15852,7 +16071,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "cc40de57-36b3-420c-95f9-a481b2d390f2",
@@ -15910,7 +16130,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -16024,7 +16245,8 @@
                               "text": "20",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "1de6a319-3f63-4f5d-ccb6-8e20bee8dfbb",
@@ -16080,7 +16302,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "5dcb84f8-8160-4bab-b395-dfb2f1498c4a",
@@ -16138,7 +16361,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -16252,7 +16476,8 @@
                               "text": "21",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "657eeee3-46dd-4d98-895f-74e93e15a49d",
@@ -16308,7 +16533,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "1ef817c0-945d-4f0f-e6be-c73ac8ef819f",
@@ -16366,7 +16592,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -16480,7 +16707,8 @@
                               "text": "22",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "6afd7aa5-985e-4df6-91bf-a0e80282200a",
@@ -16536,7 +16764,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "86e8ee80-c906-4262-aec9-036d422ff259",
@@ -16594,7 +16823,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -16708,7 +16938,8 @@
                               "text": "23",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "e96dc415-9925-4ca3-a4a2-1e80949d8192",
@@ -16764,7 +16995,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "d064a5a0-65c3-4cef-9524-37714a1c9f08",
@@ -16822,7 +17054,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -16936,7 +17169,8 @@
                               "text": "24",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "964681bb-923e-484a-ae62-87935e958f70",
@@ -16992,7 +17226,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "34634dac-2b3b-40a9-f474-c6f440f030f3",
@@ -17050,7 +17285,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -17164,7 +17400,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "49428d43-c62f-492a-cd00-90f8a1fc7977",
@@ -17220,7 +17457,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "ba3fce61-d1b9-40ac-93c2-3ddfc5c61f45",
@@ -17278,7 +17516,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -17392,7 +17631,8 @@
                               "text": "26",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "f88c8d40-d669-4cd0-971a-db95c197bff5",
@@ -17448,7 +17688,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "47e3eb5b-c585-433f-d773-4d42423541db",
@@ -17506,7 +17747,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -17620,7 +17862,8 @@
                               "text": "27",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "0f5ffb68-2579-4586-b1ce-4514a0844e9b",
@@ -17676,7 +17919,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "1887e24b-1047-4482-e0b5-66eb4e239ba5",
@@ -17734,7 +17978,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -17848,7 +18093,8 @@
                               "text": "28",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "9318390d-84df-4092-e0a5-7ef15334aea0",
@@ -17904,7 +18150,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "e0734dc4-f87c-4227-b2f4-89ba0baf9d40",
@@ -17962,7 +18209,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -18076,7 +18324,8 @@
                               "text": "29",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "88fc473c-992e-4f8f-bda7-3746f40a7b00",
@@ -18132,7 +18381,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "15a8cf4b-b572-4480-e501-119df38d9873",
@@ -18190,7 +18440,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -18304,7 +18555,8 @@
                               "text": "30",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "67e8957d-becc-4a81-8453-155f9cf40211",
@@ -18360,7 +18612,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "d2871e21-5a06-4c69-b212-7625e191aeac",
@@ -18418,7 +18671,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -18532,7 +18786,8 @@
                               "text": "31",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "7e3aec50-f137-4089-f9dc-944d4d410a59",
@@ -18588,7 +18843,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "8800c16e-2695-44ab-c4ac-5e43e303f46d",
@@ -18646,7 +18902,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -18761,7 +19018,8 @@
                               "text": "32",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "0fcfd914-68a8-4ad0-e067-2e8afc89ef89",
@@ -18817,7 +19075,8 @@
                               "text": "0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "a0407d7e-0c47-4fd4-dd01-095178fe64c3",
@@ -18875,7 +19134,8 @@
                               "text": "25",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -19219,7 +19479,8 @@
                                   "text": "Пауза для набора воды в бочку ",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 },
                                 {
                                   "objID": "0329bfc3-d0da-4144-c650-8f8f4280647a",
@@ -19339,7 +19600,8 @@
                                   "text": "мин.",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -19417,7 +19679,8 @@
                               "text": "Пауза  для наполнения бака. Устанавливается в минутах. Выключаются все клапана зон.",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -19606,7 +19869,8 @@
                                   "text": "Яркость экрана",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -19704,7 +19968,8 @@
                                   "text": "Автовыключение экрана ",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 },
                                 {
                                   "objID": "bb447e1e-8ccd-4759-8133-d2c0aa0cec01",
@@ -19823,7 +20088,8 @@
                                   "text": "сек.",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -19939,7 +20205,8 @@
                                   "text": "Перевернуть экран",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20006,7 +20273,8 @@
                               "text": "Автовыключение экрана можно установить от 10 до 99 секунд.",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20161,7 +20429,8 @@
                                   "text": "Взаимодействовать с пультом",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE|SCROLLABLE",
@@ -20253,7 +20522,8 @@
                                   "group": "",
                                   "groupIndex": 0,
                                   "text": "ESP-NOW",
-                                  "textType": "literal"
+                                  "textType": "literal",
+                                  "useStaticText": true
                                 },
                                 {
                                   "objID": "5fc8bfdb-55b3-4c23-bbab-1ce027ad6b44",
@@ -20296,7 +20566,8 @@
                                   "group": "",
                                   "groupIndex": 0,
                                   "text": "LoRa",
-                                  "textType": "literal"
+                                  "textType": "literal",
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20366,7 +20637,8 @@
                               "text": "Пульт может работать по Lora или ESP-NOW.\nESP-NOW работает на частоте WiFi на небольшие растояния,\nLoRa работет на частоте 868MHz(разрешенный диапазон) на расстояние до нескольких километров.",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20510,7 +20782,8 @@
                                       "text": "-",
                                       "textType": "literal",
                                       "longMode": "WRAP",
-                                      "recolor": false
+                                      "recolor": false,
+                                      "useStaticText": true
                                     }
                                   ],
                                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20571,7 +20844,8 @@
                                   "text": "33%",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 },
                                 {
                                   "objID": "b2d69dcf-417e-42ac-e768-04229eca63c8",
@@ -20651,7 +20925,8 @@
                                       "text": "+",
                                       "textType": "literal",
                                       "longMode": "WRAP",
-                                      "recolor": false
+                                      "recolor": false,
+                                      "useStaticText": true
                                     }
                                   ],
                                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20749,7 +21024,8 @@
                               "text": "Время работы насоса подачи подкормки в процентах от времени полива зоны. Возможно установить от 20 до 50 процентов.",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20882,7 +21158,8 @@
                                   "text": "Обновление прошивок",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -20950,7 +21227,8 @@
                               "text": "Текущая версия прошивки 0,0",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             },
                             {
                               "objID": "ce801d57-5327-4ead-b1e3-245b1701354f",
@@ -21034,7 +21312,8 @@
                               "text": "Прошивка на Github",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -21189,7 +21468,8 @@
                                   "text": "Отладка",
                                   "textType": "literal",
                                   "longMode": "WRAP",
-                                  "recolor": false
+                                  "recolor": false,
+                                  "useStaticText": true
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -21249,7 +21529,8 @@
                               "text": "Ускоренное в 60 раз выполнение программы с игнорированием ошибок связи с реле,пультом,контроллером тока.",
                               "textType": "literal",
                               "longMode": "WRAP",
-                              "recolor": false
+                              "recolor": false,
+                              "useStaticText": true
                             }
                           ],
                           "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -21928,7 +22209,8 @@
                   "text": " 1. Возьмите телефон или ноутбук и подключитесь к сети:\n  - SSID: Pump_controller - Пароль: 80100000\n 2. Откройте браузер и введите адрес: http://192.168.4.1/update\n  - Нажмите <Choose File>  выберите файл  *.bin\n  - Нажмите <Update> и дождитесь завершения.\n 3. Завершение: Устройство перезагрузится и вернется в обычный режим работы.",
                   "textType": "literal",
                   "longMode": "WRAP",
-                  "recolor": false
+                  "recolor": false,
+                  "useStaticText": true
                 }
               ],
               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -22108,7 +22390,8 @@
                       "text": "Обновление дисплея",
                       "textType": "literal",
                       "longMode": "WRAP",
-                      "recolor": false
+                      "recolor": false,
+                      "useStaticText": true
                     }
                   ],
                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -22206,7 +22489,8 @@
                       "text": "Обновление реле",
                       "textType": "literal",
                       "longMode": "WRAP",
-                      "recolor": false
+                      "recolor": false,
+                      "useStaticText": true
                     }
                   ],
                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -22304,7 +22588,8 @@
                       "text": "Назад",
                       "textType": "literal",
                       "longMode": "WRAP",
-                      "recolor": false
+                      "recolor": false,
+                      "useStaticText": true
                     },
                     {
                       "objID": "a4cee0d8-e0b3-4866-fe8f-0a77dbac5ec8",
@@ -22525,7 +22810,8 @@
                   "text": "Запустить обновление прошивки на блоке реле:",
                   "textType": "literal",
                   "longMode": "WRAP",
-                  "recolor": false
+                  "recolor": false,
+                  "useStaticText": true
                 },
                 {
                   "objID": "244a0b47-f7d8-4afd-eb08-d752d702d06d",
@@ -22627,7 +22913,8 @@
                           "text": "Блок реле 1",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -22725,7 +23012,8 @@
                           "text": "Блок реле 2",
                           "textType": "literal",
                           "longMode": "WRAP",
-                          "recolor": false
+                          "recolor": false,
+                          "useStaticText": true
                         }
                       ],
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -23193,7 +23481,8 @@
                   "text": "Выход",
                   "textType": "literal",
                   "longMode": "WRAP",
-                  "recolor": false
+                  "recolor": false,
+                  "useStaticText": true
                 },
                 {
                   "objID": "d1c45235-835e-44b8-927c-9cccf4b95d4b",
