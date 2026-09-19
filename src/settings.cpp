@@ -84,7 +84,7 @@ void fill_widgets()
     if (use_pult)
     {
         lv_obj_add_state(objects.pult, LV_STATE_CHECKED);
-        lv_obj_remove_flag(objects.esp_lora, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.esp_lora, false);
     }
     if (esp_now)
         lv_obj_add_state(objects.esp_now, LV_STATE_CHECKED);
@@ -127,11 +127,11 @@ void fill_widgets()
     // Получаем кнопку конкретной вкладки по её индексу (например, индекс 1 — вторая вкладка)
     lv_obj_t *tab_btn = lv_obj_get_child(tab_bar, 2);
     // Скрываем кнопку
-    lv_obj_add_flag(tab_btn, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(tab_btn, true);
     // Получаем контейнер с контентом страниц
     lv_obj_t *tab_content = lv_tabview_get_content(objects.settings_tv);
     // Отключаем скролл для всего контейнера
-    lv_obj_remove_flag(tab_content, LV_OBJ_FLAG_SCROLLABLE);
+    lv_obj_set_hidden(tab_content, false);
 
     lv_label_set_text(objects.version, VERSION);
     lv_label_set_text_fmt(objects.pump_pct, "%d%%", pump_active_pct);

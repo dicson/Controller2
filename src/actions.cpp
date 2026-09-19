@@ -9,12 +9,13 @@
 #include "constants.h"
 #include "enow.h"
 #include <freertos/task.h>
+#include <lgfx_user/LGFX_Sunton_ESP32-8048S070.h>
 
 #define RW_MODE false
 #define RO_MODE true
-#define GFX_BL 2
 
 extern Preferences settings;
+extern LGFX lcd;
 extern uint32_t GFX_BL_VALUE, GFX_BL_TIME;
 extern lv_obj_t *bar_list[PUMP_AMOUNT];
 extern int ROTATION;
@@ -151,7 +152,7 @@ void action_esp_lora_clicked(lv_event_t *e)
 void action_bl_changed(lv_event_t *e)
 {
     GFX_BL_VALUE = lv_slider_get_value(objects.bl);
-    analogWrite(GFX_BL, GFX_BL_VALUE);
+    lcd.setBrightness(GFX_BL_VALUE);
 }
 
 void action_bl_released(lv_event_t *e)

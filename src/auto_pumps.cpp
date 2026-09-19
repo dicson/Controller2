@@ -59,7 +59,7 @@ void pump_on()
     pump_water_state = true;
     send_root_command(PUMP_RELAY, true);
     MessageToLog("включить  насос ");
-    lv_obj_remove_flag(objects.pump, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.pump, false);
 }
 
 /**
@@ -70,7 +70,7 @@ void pump_off()
     pump_water_state = false;
     send_root_command(PUMP_RELAY, false);
     MessageToLog("выключить насос ");
-    lv_obj_add_flag(objects.pump, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.pump, true);
 }
 
 /**
@@ -92,7 +92,7 @@ void pump_setup()
     pinMode(limitSwitchPin, INPUT_PULLUP);
     tank_empty = digitalRead(limitSwitchPin);
     if (tank_empty)
-        lv_obj_remove_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.tank_empty, false);
 }
 
 /**
@@ -301,7 +301,7 @@ void update_bars(bool resetFlag)
     }
     last_ui_update = millis();
 
-    if (current_zone >= PUMP_AMOUNT || lv_obj_has_flag(objects.stop, LV_OBJ_FLAG_HIDDEN))
+    if (current_zone >= PUMP_AMOUNT || lv_obj_is_hidden(objects.stop))
     {
         send_status_to_pult();
         return;
@@ -366,8 +366,8 @@ void handle_messages()
                                               is_relay1 ? "реле 1" : "реле 2");
                     }
 
-                    lv_obj_remove_flag(objects.message_box, LV_OBJ_FLAG_HIDDEN);
-                    lv_obj_add_flag(objects.stop, LV_OBJ_FLAG_HIDDEN);
+                    lv_obj_set_hidden(objects.message_box, false);
+                    lv_obj_set_hidden(objects.stop, true);
                     MessageToLog("Ошибка связи с " + String(is_relay1 ? "relay1" : "relay2"));
                 }
             }
@@ -529,7 +529,7 @@ void handle_tank_pause(bool tank_is_empty)
         {
             is_paused = true;
             program_pause();
-            lv_obj_remove_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(objects.tank, false);
             lv_bar_set_range(objects.pause_bar, 0, (uint64_t)water_pause * MS_PER_SECOND * minutes);
         }
     }
@@ -542,7 +542,7 @@ void handle_tank_pause(bool tank_is_empty)
         {
             is_paused = false;
             program_resume();
-            lv_obj_add_flag(objects.tank, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(objects.tank, true);
         }
         else
             update_tank_pause_ui(pause_ms, pause_pass);
@@ -554,16 +554,15 @@ void handle_tank_pause(bool tank_is_empty)
  */
 void check_tank_sensor()
 {
-    bool tank_is_empty = update_tank_sensor_debounced();
+    if (lv_obj_has_state(objects.debug, LV_STATE_CHECKED))
+    {
+        tank_empty = false;
+        return;
+    }
 
-    // Обновление глобального состояния и UI
-    tank_empty = tank_is_empty;
-    if (tank_empty)
-        lv_obj_remove_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
-    else
-        lv_obj_add_flag(objects.tank_empty, LV_OBJ_FLAG_HIDDEN);
-
-    handle_tank_pause(tank_is_empty);
+    tank_empty = update_tank_sensor_debounced();
+    lv_obj_set_hidden(objects.tank_empty, !tank_empty);
+    handle_tank_pause(tank_empty);
 }
 
 /**
