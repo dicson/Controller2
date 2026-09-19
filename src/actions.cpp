@@ -39,20 +39,20 @@ void millis_to_HMS(unsigned long ms)
 
 void hide_k_buttons()
 {
-    lv_obj_add_flag(objects.button10, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.button_10, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.button_dec, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.button_inc, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.button_reset, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.button10, true);
+    lv_obj_set_hidden(objects.button_10, true);
+    lv_obj_set_hidden(objects.button_dec, true);
+    lv_obj_set_hidden(objects.button_inc, true);
+    lv_obj_set_hidden(objects.button_reset, true);
 }
 
 void show_k_buttons()
 {
-    lv_obj_remove_flag(objects.button10, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.button_10, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.button_dec, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.button_inc, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.button_reset, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.button10, false);
+    lv_obj_set_hidden(objects.button_10, false);
+    lv_obj_set_hidden(objects.button_dec, false);
+    lv_obj_set_hidden(objects.button_inc, false);
+    lv_obj_set_hidden(objects.button_reset, false);
 }
 
 void update_zone_list()
@@ -65,15 +65,15 @@ void update_zone_list()
 
         if (dw_time[i] != 0)
         {
-            lv_obj_remove_flag(bar, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(bar, false);
             lv_obj_set_style_bg_opa(button, FULL_OPACITY, LV_PART_MAIN);
-            lv_obj_remove_flag(checkbox, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(checkbox, false);
         }
         else
         {
-            lv_obj_add_flag(bar, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(bar, true);
             lv_obj_set_style_bg_opa(button, LOW_OPACITY, LV_PART_MAIN);
-            lv_obj_add_flag(checkbox, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_hidden(checkbox, true);
         }
     }
 }
@@ -131,9 +131,9 @@ void action_use_pult(lv_event_t *e)
 {
     use_pult = lv_obj_has_state(objects.pult, LV_STATE_CHECKED);
     if (use_pult)
-        lv_obj_remove_flag(objects.esp_lora, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.esp_lora, false);
     else
-        lv_obj_add_flag(objects.esp_lora, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.esp_lora, true);
     settings.begin("Settings", RW_MODE);
     settings.putBool("use_pult", use_pult);
     settings.end();
@@ -166,20 +166,20 @@ void action_bl_released(lv_event_t *e)
 void action_idle_time_focused(lv_event_t *e)
 {
     lv_keyboard_set_textarea(objects.settings_kb, objects.bl_idle);
-    lv_obj_remove_flag(objects.settings_kb, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.settings_kb, false);
     lv_textarea_set_cursor_pos(objects.bl_idle, LV_TEXTAREA_CURSOR_LAST);
 }
 
 void action_pause_released(lv_event_t *e)
 {
     lv_keyboard_set_textarea(objects.settings_kb, objects.pause);
-    lv_obj_remove_flag(objects.settings_kb, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.settings_kb, false);
     lv_textarea_set_cursor_pos(objects.pause, LV_TEXTAREA_CURSOR_LAST);
 }
 
 void action_pause_ready(lv_event_t *e)
 {
-    lv_obj_add_flag(objects.settings_kb, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.settings_kb, true);
     const char *txt = lv_textarea_get_text(objects.pause);
     water_pause = (txt[0] == '\0') ? 0 : atol(txt);
     if (txt[0] == '\0' || water_pause < 10)
@@ -194,7 +194,7 @@ void action_pause_ready(lv_event_t *e)
 
 void action_idle_time_unfocused(lv_event_t *e)
 {
-    lv_obj_add_flag(objects.settings_kb, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.settings_kb, true);
     const char *txt = lv_textarea_get_text(objects.bl_idle);
     GFX_BL_TIME = (txt[0] == '\0') ? MIN_GFX_BL_TIME : atol(txt);
     if (GFX_BL_TIME < MIN_GFX_BL_TIME || (txt[0] == '\0'))
@@ -243,17 +243,17 @@ void action_start(lv_event_t *e)
         return;
 
     lv_bar_set_range(objects.prog_bar, 0, programm_time);
-    lv_obj_remove_flag(objects.prog_bar, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.tab_1, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.tab_2, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.tab_settings, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_add_flag(objects.start, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.prog_bar, false);
+    lv_obj_set_hidden(objects.tab_1, true);
+    lv_obj_set_hidden(objects.tab_2, true);
+    lv_obj_set_hidden(objects.tab_settings, true);
+    lv_obj_set_hidden(objects.start, true);
     hide_k_buttons();
     lv_obj_add_state(objects.start, LV_STATE_DISABLED);
-    lv_obj_remove_flag(objects.stop, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.stop, false);
     lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
-    lv_obj_remove_flag(objects.spinner, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.pause_btn, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.spinner, false);
+    lv_obj_set_hidden(objects.pause_btn, false);
     lv_bar_set_value(objects.prog_bar, 0, LV_ANIM_OFF);
 }
 
@@ -267,10 +267,10 @@ void action_stop(lv_event_t *e)
     for (byte i = 0; i < PUMP_AMOUNT; i++)
     {
         lv_obj_t *zone_button = lv_obj_get_child(objects.tab_1, i);
-        if (!lv_obj_has_flag(zone_button, LV_OBJ_FLAG_CHECKABLE))
+        if (!lv_obj_is_checkable(zone_button))
         {
             lv_obj_t *check_box = lv_obj_get_child(zone_button, 1);
-            lv_obj_add_flag(check_box, LV_OBJ_FLAG_CLICKABLE);
+            lv_obj_set_click(check_box, true);
             lv_obj_remove_state(check_box, LV_STATE_CHECKED);
         }
         pump_finished[i] = true;
@@ -278,13 +278,13 @@ void action_stop(lv_event_t *e)
             pump_state[i] = !SWITCH_LEVEL;
     }
     now_pumping = false;
-    lv_obj_add_flag(objects.stop, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.stop, true);
     lv_obj_add_state(objects.stop, LV_STATE_DISABLED);
-    lv_obj_remove_flag(objects.start, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.start, false);
     show_k_buttons();
-    lv_obj_remove_flag(objects.tab_1, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.tab_2, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_remove_flag(objects.tab_settings, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_hidden(objects.tab_1, false);
+    lv_obj_set_hidden(objects.tab_2, false);
+    lv_obj_set_hidden(objects.tab_settings, false);
     lv_obj_clear_state(objects.start, LV_STATE_DISABLED);
     lv_obj_add_flag(objects.spinner, LV_OBJ_FLAG_HIDDEN);
     lv_obj_add_flag(objects.pause_btn, LV_OBJ_FLAG_HIDDEN);
@@ -453,23 +453,23 @@ void action_zone_selected(lv_event_t *e)
 {
     lv_obj_t *zone_button = lv_event_get_current_target_obj(e);
     int32_t zone_num = lv_obj_get_index(zone_button);
-    lv_obj_remove_flag(lv_event_get_target_obj(e), LV_OBJ_FLAG_CLICKABLE);
+    lv_obj_set_click(lv_event_get_target_obj(e), false);
 
     pump_finished[zone_num] = false;
 
-    if (lv_obj_has_flag(objects.stop, LV_OBJ_FLAG_HIDDEN))
+    if (lv_obj_is_hidden(objects.stop))
     {
         start_time = millis();
-        lv_obj_add_flag(objects.tab_2, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_add_flag(objects.tab_settings, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_add_flag(objects.start, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.tab_2, true);
+        lv_obj_set_hidden(objects.tab_settings, true);
+        lv_obj_set_hidden(objects.start, true);
         hide_k_buttons();
         lv_obj_add_state(objects.start, LV_STATE_DISABLED);
-        lv_obj_remove_flag(objects.stop, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.stop, false);
         lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
-        lv_obj_remove_flag(objects.spinner, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_remove_flag(objects.prog_bar, LV_OBJ_FLAG_HIDDEN);
-        lv_obj_remove_flag(objects.pause_btn, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_set_hidden(objects.spinner, false);
+        lv_obj_set_hidden(objects.prog_bar, false);
+        lv_obj_set_hidden(objects.pause_btn, false);
 
         for (byte i = 0; i < PUMP_AMOUNT; i++)
         {
