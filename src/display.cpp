@@ -49,6 +49,15 @@ void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
 void setup_display()
 {
     Serial.println("Initializing display...");
+    // Получаем указатель на панель и её шину
+    auto panel = lcd.getPanel();
+    auto bus = (lgfx::Bus_RGB *)panel->getBus();
+    // Читаем конфигурацию шины
+    auto cfg = bus->config();
+    // Меняем частоту (например, снижаем до 9 МГц для стабильности или поднимаем до 80 МГц)
+    cfg.freq_write = 9000000;
+    // Записываем конфигурацию обратно
+    bus->config(cfg);
 
     lcd.setBrightness(0);
     lcd.init();
