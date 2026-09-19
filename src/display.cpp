@@ -3,12 +3,8 @@
 
 #include <LovyanGFX.hpp>
 #include <lgfx_user/LGFX_Sunton_ESP32-8048S070.h>
-#include <Wire.h>
 
 LGFX lcd;
-// Инициализация объектов
-TAMC_GT911 ts(TOUCH_GT911_SDA, TOUCH_GT911_SCL, TOUCH_GT911_INT, TOUCH_GT911_RST,
-              max(TOUCH_MAP_X1, TOUCH_MAP_X2), max(TOUCH_MAP_Y1, TOUCH_MAP_Y2));
 
 lv_display_t *disp;
 static lv_color_t *disp_draw_buf;
@@ -31,19 +27,14 @@ void my_disp_flush(lv_display_t *disp, const lv_area_t *area, uint8_t *px_map)
 
 void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
 {
-    ts.read();
-    if (ts.isTouched)
+    int16_t x, y;
+    if (lcd.getTouch(&x, &y))
     {
-        for (int i = 0; i < ts.touches; i++)
-        {
-            if (i == 0)
-            {
-                data->state = LV_INDEV_STATE_PRESSED;
-                data->point.x = ts.points[i].x;
-                data->point.y = ts.points[i].y;
-            }
-        }
-        if (ledcRead(GFX_BL) == 0)
+        data->state = LV_INDEV_STATE_PRESSED;
+        data->point.x = x;
+        data->point.y = y;
+
+        if (lcd.getBrightness() == 0)
         {
             lcd.setBrightness(GFX_BL_VALUE);
             lv_indev_wait_release(indev);
@@ -58,20 +49,11 @@ void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
 void setup_display()
 {
     Serial.println("Initializing display...");
-    // 1. Увеличиваем буфер I2C для GT911 ДО вызова Wire.begin()
-    Wire.setBufferSize(256);
-    Wire.begin(TOUCH_GT911_SDA, TOUCH_GT911_SCL);
 
     lcd.setBrightness(0);
     lcd.init();
     lcd.setRotation(ROTATION);
     lcd.setSwapBytes(true);
-
-    ts.begin();
-    if (ROTATION == 0)
-        ts.setRotation(1);
-    else
-        ts.setRotation(3);
 
     lv_init();
     lv_tick_set_cb(millis_cb);
@@ -112,13 +94,11 @@ void revert_display()
     if (ROTATION == 0)
     {
         lcd.setRotation(2);
-        ts.setRotation(3);
         ROTATION = 2;
     }
     else
     {
         lcd.setRotation(0);
-        ts.setRotation(1);
         ROTATION = 0;
     }
 }
