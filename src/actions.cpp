@@ -10,6 +10,7 @@
 #include "enow.h"
 #include <freertos/task.h>
 #include <lgfx_user/LGFX_Sunton_ESP32-8048S070.h>
+#include <type_traits>
 
 #define RW_MODE false
 #define RO_MODE true
@@ -23,6 +24,15 @@ extern bool is_paused, tank_empty, hand_paused;
 extern void revert_display();
 extern void program_pause();
 extern void program_resume();
+
+template<typename T>
+void save_setting(const char* key, T value) {
+    settings.begin("Settings", RW_MODE);
+    if constexpr (std::is_same_v<T, bool>) settings.putBool(key, value);
+    else if constexpr (std::is_same_v<T, int>) settings.putInt(key, value);
+    else if constexpr (std::is_same_v<T, uint32_t> || std::is_same_v<T, long>) settings.putLong(key, value);
+    settings.end();
+}
 
 uint32_t water_num, start_time, programm_time;
 int8_t thisH, thisM, thisS;
@@ -74,9 +84,7 @@ void update_zone_list()
 void action_revert_display(lv_event_t *e)
 {
     revert_display();
-    settings.begin("Settings", RW_MODE);
-    settings.putInt("ROTATION", ROTATION);
-    settings.end();
+    save_setting("ROTATION", ROTATION);
     // Полная очистка UI перед сменой ориентации
     lv_obj_clean(lv_screen_active());
 
@@ -111,18 +119,14 @@ void action_debug(lv_event_t *e)
 void action_plant_food(lv_event_t *e)
 {
     plant_food = lv_obj_has_state(objects.plant_food, LV_STATE_CHECKED);
-    settings.begin("Settings", RW_MODE);
-    settings.putBool("plant_food", plant_food);
-    settings.end();
+    save_setting("plant_food", plant_food);
 }
 
 void action_use_pult(lv_event_t *e)
 {
     use_pult = lv_obj_has_state(objects.pult, LV_STATE_CHECKED);
     lv_obj_set_hidden(objects.esp_lora, !use_pult);
-    settings.begin("Settings", RW_MODE);
-    settings.putBool("use_pult", use_pult);
-    settings.end();
+    save_setting("use_pult", use_pult);
 }
 
 void action_esp_lora_clicked(lv_event_t *e)
@@ -144,9 +148,7 @@ void action_bl_changed(lv_event_t *e)
 void action_bl_released(lv_event_t *e)
 {
     GFX_BL_VALUE = lv_slider_get_value(objects.bl);
-    settings.begin("Settings", RW_MODE);
-    settings.putLong("GFX_BL_VALUE", GFX_BL_VALUE);
-    settings.end();
+    save_setting("GFX_BL_VALUE", GFX_BL_VALUE);
 }
 
 void action_idle_time_focused(lv_event_t *e)
@@ -173,9 +175,7 @@ void action_pause_ready(lv_event_t *e)
         lv_textarea_set_text(objects.pause, "10");
         water_pause = 10;
     }
-    settings.begin("Settings", RW_MODE);
-    settings.putLong("water_pause", water_pause);
-    settings.end();
+    save_setting("water_pause", water_pause);
 }
 
 void action_idle_time_unfocused(lv_event_t *e)
@@ -188,9 +188,7 @@ void action_idle_time_unfocused(lv_event_t *e)
         GFX_BL_TIME = MIN_GFX_BL_TIME;
         lv_textarea_set_text(objects.bl_idle, String(MIN_GFX_BL_TIME).c_str());
     }
-    settings.begin("Settings", RW_MODE);
-    settings.putLong("GFX_BL_TIME", GFX_BL_TIME);
-    settings.end();
+    save_setting("GFX_BL_TIME", GFX_BL_TIME);
 }
 
 // Вспомогательная функция для расчета общего времени программы
@@ -307,9 +305,7 @@ void action_pause_btn(lv_event_t *e)
 void save_k_dw_time()
 {
     lv_label_set_text(objects.k_dw_time, String(k_dw_time).c_str());
-    settings.begin("Settings", RW_MODE);
-    settings.putLong("k_dw_time", k_dw_time);
-    settings.end();
+    save_setting("k_dw_time", k_dw_time);
 }
 
 void action_decrement_10(lv_event_t *e)
@@ -375,9 +371,7 @@ void action_pump_pct_dec(lv_event_t *e)
     {
         --pump_active_pct;
         lv_label_set_text_fmt(objects.pump_pct, "%d%%", pump_active_pct);
-        settings.begin("Settings", RW_MODE);
-        settings.putLong("pump_active_pct", pump_active_pct);
-        settings.end();
+        save_setting("pump_active_pct", pump_active_pct);
     }
 }
 
@@ -387,9 +381,7 @@ void action_pump_pct_inc(lv_event_t *e)
     {
         ++pump_active_pct;
         lv_label_set_text_fmt(objects.pump_pct, "%d%%", pump_active_pct);
-        settings.begin("Settings", RW_MODE);
-        settings.putLong("pump_active_pct", pump_active_pct);
-        settings.end();
+        save_setting("pump_active_pct", pump_active_pct);
     }
 }
 
