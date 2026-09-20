@@ -118,28 +118,28 @@ void action_revert_display(lv_event_t *e)
 
 void action_debug(lv_event_t *e)
 {
-    bool debug = lv_obj_has_state(objects.debug, LV_STATE_CHECKED);
+    bool debug = lv_obj_is_checked(objects.debug);
     lv_obj_set_hidden(objects.debug_label, !debug);
     minutes = debug ? DEBUG_TIME_MINUTES : REAL_TIME_MINUTES;
 }
 
 void action_plant_food(lv_event_t *e)
 {
-    plant_food = lv_obj_has_state(objects.plant_food, LV_STATE_CHECKED);
+    plant_food = lv_obj_is_checked(objects.plant_food);
     save_setting("plant_food", plant_food);
 }
 
 void action_use_pult(lv_event_t *e)
 {
-    use_pult = lv_obj_has_state(objects.pult, LV_STATE_CHECKED);
+    use_pult = lv_obj_is_checked(objects.pult);
     lv_obj_set_hidden(objects.esp_lora, !use_pult);
     save_setting("use_pult", use_pult);
 }
 
 void action_esp_lora_clicked(lv_event_t *e)
 {
-    esp_now = lv_obj_has_state(objects.esp_now, LV_STATE_CHECKED);
-    lora = lv_obj_has_state(objects.lora, LV_STATE_CHECKED);
+    esp_now = lv_obj_is_checked(objects.esp_now);
+    lora = lv_obj_is_checked(objects.lora);
     save_setting("lora", lora);
     save_setting("esp_now", esp_now);
 }
@@ -252,7 +252,7 @@ void action_stop(lv_event_t *e)
         {
             lv_obj_t *check_box = lv_obj_get_child(zone_button, 1);
             lv_obj_set_clickable(check_box, true);
-            lv_obj_remove_state(check_box, LV_STATE_CHECKED);
+            lv_obj_set_checked(check_box, false);
         }
         pump_finished[i] = true;
         if (pump_state[i] == SWITCH_LEVEL)
@@ -452,7 +452,7 @@ void action_zone_time_clicked(lv_event_t *e)
     {
         lv_obj_set_hidden(objects.keyboard, false);
         lv_obj_set_hidden(objects.input_area, false);
-        lv_obj_add_state(objects.input_area, LV_STATE_FOCUSED);
+        lv_obj_set_focused(objects.input_area, true);
     }
 }
 
