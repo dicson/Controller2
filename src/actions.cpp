@@ -66,10 +66,8 @@ void update_zone_list()
         lv_obj_set_hidden(bar, dw_time[i] == 0);
         lv_obj_set_hidden(checkbox, dw_time[i] == 0);
 
-        if (dw_time[i] != 0)
-            lv_obj_set_style_bg_opa(button, FULL_OPACITY, LV_PART_MAIN);
-        else
-            lv_obj_set_style_bg_opa(button, LOW_OPACITY, LV_PART_MAIN);
+        bool active = dw_time[i] != 0;
+        lv_obj_set_style_bg_opa(button, active ? FULL_OPACITY : LOW_OPACITY, LV_PART_MAIN);
     }
 }
 
@@ -94,10 +92,8 @@ void action_revert_display(lv_event_t *e)
         lv_label_set_text(dw, String(dw_time[i]).c_str());
         lv_obj_set_ext_click_area(dw, EXT_CLICK_AREA_SMALL);
 
-        if (dw_time[i] != 0)
-            lv_obj_set_style_bg_opa(button, FULL_OPACITY, LV_PART_MAIN);
-        else
-            lv_obj_set_style_bg_opa(button, LOW_OPACITY, LV_PART_MAIN);
+        bool active = dw_time[i] != 0;
+        lv_obj_set_style_bg_opa(button, active ? FULL_OPACITY : LOW_OPACITY, LV_PART_MAIN);
     }
     update_zone_list();
 }
