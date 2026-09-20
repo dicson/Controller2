@@ -97,7 +97,7 @@ void action_revert_display(lv_event_t *e)
         lv_obj_t *button = lv_obj_get_child(objects.tab_2, i);
 
         lv_obj_t *dw = lv_obj_get_child(button, 1);
-        lv_label_set_text(dw, String(dw_time[i]).c_str());
+        lv_label_set_text_fmt(dw, "%d", dw_time[i]);
         lv_obj_set_ext_click_area(dw, EXT_CLICK_AREA_SMALL);
 
         bool active = dw_time[i] != 0;
@@ -186,7 +186,9 @@ void action_idle_time_unfocused(lv_event_t *e)
     if (GFX_BL_TIME < MIN_GFX_BL_TIME || (txt[0] == '\0'))
     {
         GFX_BL_TIME = MIN_GFX_BL_TIME;
-        lv_textarea_set_text(objects.bl_idle, String(MIN_GFX_BL_TIME).c_str());
+        char buf[16];
+        snprintf(buf, sizeof(buf), "%d", MIN_GFX_BL_TIME);
+        lv_textarea_set_text(objects.bl_idle, buf);
     }
     save_setting("GFX_BL_TIME", GFX_BL_TIME);
 }
@@ -304,7 +306,7 @@ void action_pause_btn(lv_event_t *e)
 
 void save_k_dw_time()
 {
-    lv_label_set_text(objects.k_dw_time, String(k_dw_time).c_str());
+    lv_label_set_text_fmt(objects.k_dw_time, "%d", k_dw_time);
     save_setting("k_dw_time", k_dw_time);
 }
 
