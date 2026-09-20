@@ -25,12 +25,16 @@ extern void revert_display();
 extern void program_pause();
 extern void program_resume();
 
-template<typename T>
-void save_setting(const char* key, T value) {
+template <typename T>
+void save_setting(const char *key, T value)
+{
     settings.begin("Settings", RW_MODE);
-    if constexpr (std::is_same_v<T, bool>) settings.putBool(key, value);
-    else if constexpr (std::is_same_v<T, int>) settings.putInt(key, value);
-    else if constexpr (std::is_same_v<T, uint32_t> || std::is_same_v<T, long>) settings.putLong(key, value);
+    if constexpr (std::is_same_v<T, bool>)
+        settings.putBool(key, value);
+    else if constexpr (std::is_same_v<T, int>)
+        settings.putInt(key, value);
+    else if constexpr (std::is_same_v<T, uint32_t> || std::is_same_v<T, long>)
+        settings.putLong(key, value);
     settings.end();
 }
 
@@ -47,7 +51,8 @@ void millis_to_HMS(unsigned long ms)
     thisS = allSeconds % 60;          // Секунды
 }
 
-void set_k_buttons_visible(bool visible) {
+void set_k_buttons_visible(bool visible)
+{
     lv_obj_set_hidden(objects.button10, !visible);
     lv_obj_set_hidden(objects.button_10, !visible);
     lv_obj_set_hidden(objects.button_dec, !visible);
@@ -55,7 +60,8 @@ void set_k_buttons_visible(bool visible) {
     lv_obj_set_hidden(objects.button_reset, !visible);
 }
 
-void set_ui_pumping_state(bool running) {
+void set_ui_pumping_state(bool running)
+{
     lv_obj_set_hidden(objects.prog_bar, !running);
     lv_obj_set_hidden(objects.tab_1, running);
     lv_obj_set_hidden(objects.tab_2, running);
@@ -64,16 +70,9 @@ void set_ui_pumping_state(bool running) {
     lv_obj_set_hidden(objects.stop, !running);
     lv_obj_set_hidden(objects.spinner, !running);
     lv_obj_set_hidden(objects.pause_btn, !running);
-    
-    if (running) {
-        lv_obj_add_state(objects.start, LV_STATE_DISABLED);
-        lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
-        set_k_buttons_visible(false);
-    } else {
-        lv_obj_clear_state(objects.start, LV_STATE_DISABLED);
-        lv_obj_add_state(objects.stop, LV_STATE_DISABLED);
-        set_k_buttons_visible(true);
-    }
+    set_k_buttons_visible(!running);
+    lv_obj_set_disabled(objects.start, running);
+    lv_obj_set_disabled(objects.stop, !running);
 }
 
 void update_zone_list()
@@ -121,10 +120,7 @@ void action_debug(lv_event_t *e)
 {
     bool debug = lv_obj_has_state(objects.debug, LV_STATE_CHECKED);
     lv_obj_set_hidden(objects.debug_label, !debug);
-    if (debug)
-        minutes = DEBUG_TIME_MINUTES;
-    else
-        minutes = REAL_TIME_MINUTES;
+    minutes = debug ? DEBUG_TIME_MINUTES : REAL_TIME_MINUTES;
 }
 
 void action_plant_food(lv_event_t *e)
@@ -431,6 +427,7 @@ void action_zone_selected(lv_event_t *e)
     {
         start_time = millis();
         set_ui_pumping_state(true);
+        lv_obj_set_hidden(objects.tab_1, false);
 
         for (byte i = 0; i < PUMP_AMOUNT; i++)
         {
