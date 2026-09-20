@@ -47,22 +47,12 @@ void millis_to_HMS(unsigned long ms)
     thisS = allSeconds % 60;          // Секунды
 }
 
-void hide_k_buttons()
-{
-    lv_obj_set_hidden(objects.button10, true);
-    lv_obj_set_hidden(objects.button_10, true);
-    lv_obj_set_hidden(objects.button_dec, true);
-    lv_obj_set_hidden(objects.button_inc, true);
-    lv_obj_set_hidden(objects.button_reset, true);
-}
-
-void show_k_buttons()
-{
-    lv_obj_set_hidden(objects.button10, false);
-    lv_obj_set_hidden(objects.button_10, false);
-    lv_obj_set_hidden(objects.button_dec, false);
-    lv_obj_set_hidden(objects.button_inc, false);
-    lv_obj_set_hidden(objects.button_reset, false);
+void set_k_buttons_visible(bool visible) {
+    lv_obj_set_hidden(objects.button10, !visible);
+    lv_obj_set_hidden(objects.button_10, !visible);
+    lv_obj_set_hidden(objects.button_dec, !visible);
+    lv_obj_set_hidden(objects.button_inc, !visible);
+    lv_obj_set_hidden(objects.button_reset, !visible);
 }
 
 void update_zone_list()
@@ -133,10 +123,8 @@ void action_esp_lora_clicked(lv_event_t *e)
 {
     esp_now = lv_obj_has_state(objects.esp_now, LV_STATE_CHECKED);
     lora = lv_obj_has_state(objects.lora, LV_STATE_CHECKED);
-    settings.begin("Settings", RW_MODE);
-    settings.putBool("lora", lora);
-    settings.putBool("esp_now", esp_now);
-    settings.end();
+    save_setting("lora", lora);
+    save_setting("esp_now", esp_now);
 }
 
 void action_bl_changed(lv_event_t *e)
@@ -234,7 +222,7 @@ void action_start(lv_event_t *e)
     lv_obj_set_hidden(objects.tab_2, true);
     lv_obj_set_hidden(objects.tab_settings, true);
     lv_obj_set_hidden(objects.start, true);
-    hide_k_buttons();
+    set_k_buttons_visible(false);
     lv_obj_add_state(objects.start, LV_STATE_DISABLED);
     lv_obj_set_hidden(objects.stop, false);
     lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
@@ -267,7 +255,7 @@ void action_stop(lv_event_t *e)
     lv_obj_set_hidden(objects.stop, true);
     lv_obj_add_state(objects.stop, LV_STATE_DISABLED);
     lv_obj_set_hidden(objects.start, false);
-    show_k_buttons();
+    set_k_buttons_visible(true);
     lv_obj_set_hidden(objects.tab_1, false);
     lv_obj_set_hidden(objects.tab_2, false);
     lv_obj_set_hidden(objects.tab_settings, false);
@@ -443,7 +431,7 @@ void action_zone_selected(lv_event_t *e)
         lv_obj_set_hidden(objects.tab_2, true);
         lv_obj_set_hidden(objects.tab_settings, true);
         lv_obj_set_hidden(objects.start, true);
-        hide_k_buttons();
+        set_k_buttons_visible(false);
         lv_obj_add_state(objects.start, LV_STATE_DISABLED);
         lv_obj_set_hidden(objects.stop, false);
         lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
