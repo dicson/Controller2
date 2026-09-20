@@ -278,16 +278,8 @@ void action_pause_btn(lv_event_t *e)
         return;
     lv_obj_set_hidden(objects.tank, true);
     is_paused = !is_paused;
-    if (is_paused)
-    {
-        hand_paused = true;
-        program_pause();
-    }
-    else
-    {
-        hand_paused = false;
-        program_resume();
-    }
+    hand_paused = is_paused;
+    is_paused ? program_pause() : program_resume();
 }
 
 void save_k_dw_time()
