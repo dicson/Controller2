@@ -490,7 +490,7 @@ void action_input_done(lv_event_t *e)
     settings.begin("Settings", RW_MODE);
     int zone_num = (int)lv_obj_get_index(g_selected_zone_btn);
 
-    if (water_num == 1)
+    if (water_num == TIME_INPUT_INDEX)
     {
         dw_time[zone_num] = atol(txt);
         settings.putBytes("dw_time", dw_time, sizeof(dw_time));
