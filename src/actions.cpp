@@ -55,6 +55,27 @@ void set_k_buttons_visible(bool visible) {
     lv_obj_set_hidden(objects.button_reset, !visible);
 }
 
+void set_ui_pumping_state(bool running) {
+    lv_obj_set_hidden(objects.prog_bar, !running);
+    lv_obj_set_hidden(objects.tab_1, running);
+    lv_obj_set_hidden(objects.tab_2, running);
+    lv_obj_set_hidden(objects.tab_settings, running);
+    lv_obj_set_hidden(objects.start, running);
+    lv_obj_set_hidden(objects.stop, !running);
+    lv_obj_set_hidden(objects.spinner, !running);
+    lv_obj_set_hidden(objects.pause_btn, !running);
+    
+    if (running) {
+        lv_obj_add_state(objects.start, LV_STATE_DISABLED);
+        lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
+        set_k_buttons_visible(false);
+    } else {
+        lv_obj_clear_state(objects.start, LV_STATE_DISABLED);
+        lv_obj_add_state(objects.stop, LV_STATE_DISABLED);
+        set_k_buttons_visible(true);
+    }
+}
+
 void update_zone_list()
 {
     for (int i = 0; i < PUMP_AMOUNT; i++)
@@ -217,17 +238,7 @@ void action_start(lv_event_t *e)
         return;
 
     lv_bar_set_range(objects.prog_bar, 0, programm_time);
-    lv_obj_set_hidden(objects.prog_bar, false);
-    lv_obj_set_hidden(objects.tab_1, true);
-    lv_obj_set_hidden(objects.tab_2, true);
-    lv_obj_set_hidden(objects.tab_settings, true);
-    lv_obj_set_hidden(objects.start, true);
-    set_k_buttons_visible(false);
-    lv_obj_add_state(objects.start, LV_STATE_DISABLED);
-    lv_obj_set_hidden(objects.stop, false);
-    lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
-    lv_obj_set_hidden(objects.spinner, false);
-    lv_obj_set_hidden(objects.pause_btn, false);
+    set_ui_pumping_state(true);
     lv_bar_set_value(objects.prog_bar, 0, LV_ANIM_OFF);
 }
 
@@ -252,16 +263,7 @@ void action_stop(lv_event_t *e)
             pump_state[i] = !SWITCH_LEVEL;
     }
     now_pumping = false;
-    lv_obj_set_hidden(objects.stop, true);
-    lv_obj_add_state(objects.stop, LV_STATE_DISABLED);
-    lv_obj_set_hidden(objects.start, false);
-    set_k_buttons_visible(true);
-    lv_obj_set_hidden(objects.tab_1, false);
-    lv_obj_set_hidden(objects.tab_2, false);
-    lv_obj_set_hidden(objects.tab_settings, false);
-    lv_obj_clear_state(objects.start, LV_STATE_DISABLED);
-    lv_obj_set_hidden(objects.spinner, true);
-    lv_obj_set_hidden(objects.pause_btn, true);
+    set_ui_pumping_state(false);
     lv_obj_set_hidden(objects.tank, true);
     update_zone_list();
     if (is_paused)
@@ -428,16 +430,7 @@ void action_zone_selected(lv_event_t *e)
     if (lv_obj_is_hidden(objects.stop))
     {
         start_time = millis();
-        lv_obj_set_hidden(objects.tab_2, true);
-        lv_obj_set_hidden(objects.tab_settings, true);
-        lv_obj_set_hidden(objects.start, true);
-        set_k_buttons_visible(false);
-        lv_obj_add_state(objects.start, LV_STATE_DISABLED);
-        lv_obj_set_hidden(objects.stop, false);
-        lv_obj_clear_state(objects.stop, LV_STATE_DISABLED);
-        lv_obj_set_hidden(objects.spinner, false);
-        lv_obj_set_hidden(objects.prog_bar, false);
-        lv_obj_set_hidden(objects.pause_btn, false);
+        set_ui_pumping_state(true);
 
         for (byte i = 0; i < PUMP_AMOUNT; i++)
         {
