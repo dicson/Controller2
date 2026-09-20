@@ -28,8 +28,8 @@ typedef struct _objects_t {
     lv_obj_t *prog_bar;
     lv_obj_t *bar_label;
     lv_obj_t *spinner;
-    lv_obj_t *stop;
     lv_obj_t *start;
+    lv_obj_t *stop;
     lv_obj_t *obj0;
     lv_obj_t *plant_food;
     lv_obj_t *pump;

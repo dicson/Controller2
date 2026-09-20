@@ -113,6 +113,25 @@ void create_screen_main() {
                                     lv_obj_set_style_arc_width(obj, 5, LV_PART_INDICATOR | LV_STATE_DEFAULT);
                                 }
                                 {
+                                    // Start
+                                    lv_obj_t *obj = lv_button_create(parent_obj);
+                                    objects.start = obj;
+                                    lv_obj_set_pos(obj, 663, 363);
+                                    lv_obj_set_size(obj, 100, 50);
+                                    lv_obj_add_event_cb(obj, action_start, LV_EVENT_RELEASED, (void *)0);
+                                    lv_obj_set_style_bg_color(obj, lv_color_hex(0x087343), LV_PART_MAIN | LV_STATE_DEFAULT);
+                                    {
+                                        lv_obj_t *parent_obj = obj;
+                                        {
+                                            lv_obj_t *obj = lv_label_create(parent_obj);
+                                            lv_obj_set_pos(obj, 0, 0);
+                                            lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                                            lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                                            lv_label_set_text_static(obj, "Старт");
+                                        }
+                                    }
+                                }
+                                {
                                     // Stop
                                     lv_obj_t *obj = lv_button_create(parent_obj);
                                     objects.stop = obj;
@@ -130,25 +149,6 @@ void create_screen_main() {
                                             lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                             lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                             lv_label_set_text_static(obj, "Стоп");
-                                        }
-                                    }
-                                }
-                                {
-                                    // Start
-                                    lv_obj_t *obj = lv_button_create(parent_obj);
-                                    objects.start = obj;
-                                    lv_obj_set_pos(obj, 663, 363);
-                                    lv_obj_set_size(obj, 100, 50);
-                                    lv_obj_add_event_cb(obj, action_start, LV_EVENT_RELEASED, (void *)0);
-                                    lv_obj_set_style_bg_color(obj, lv_color_hex(0x087343), LV_PART_MAIN | LV_STATE_DEFAULT);
-                                    {
-                                        lv_obj_t *parent_obj = obj;
-                                        {
-                                            lv_obj_t *obj = lv_label_create(parent_obj);
-                                            lv_obj_set_pos(obj, 0, 0);
-                                            lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                                            lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-                                            lv_label_set_text_static(obj, "Старт");
                                         }
                                     }
                                 }
@@ -4823,8 +4823,8 @@ void delete_screen_main() {
     objects.prog_bar = 0;
     objects.bar_label = 0;
     objects.spinner = 0;
-    objects.stop = 0;
     objects.start = 0;
+    objects.stop = 0;
     objects.obj0 = 0;
     objects.plant_food = 0;
     objects.pump = 0;
