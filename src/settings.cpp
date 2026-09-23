@@ -34,19 +34,9 @@ void setup_settings()
         settings.end();
         settings.begin("Settings", RW_MODE);
 
-        settings.putInt("ROTATION", 0);
-        settings.putLong("GFX_BL_VALUE", DEFAULT_GFX_BL_VALUE);
-        settings.putLong("GFX_BL_TIME", DEFAULT_GFX_BL_TIME);
-        settings.putLong("water_pause", DEFAULT_WATER_PAUSE);
-        settings.putLong("k_dw_time", DEFAULT_K_DW_TIME);
-
         // Обнуление глобальных массивов и их сохранение
         memset(dw_time, 0, sizeof(dw_time));
-
         settings.putBytes("dw_time", dw_time, sizeof(dw_time));
-        settings.putBool("use_pult", false);
-        settings.putBool("lora", false);
-        settings.putBool("esp_now", true);
 
         settings.putBool("nvsInit", true);
         settings.end();
@@ -54,15 +44,15 @@ void setup_settings()
     }
 
     ROTATION = settings.getInt("ROTATION");
-    water_pause = settings.getLong("water_pause");
-    GFX_BL_VALUE = settings.getLong("GFX_BL_VALUE");
-    GFX_BL_TIME = settings.getLong("GFX_BL_TIME");
-    k_dw_time = settings.getLong("k_dw_time");
+    water_pause = settings.getLong("water_pause", DEFAULT_WATER_PAUSE);
+    GFX_BL_VALUE = settings.getLong("GFX_BL_VALUE", DEFAULT_GFX_BL_VALUE);
+    GFX_BL_TIME = settings.getLong("GFX_BL_TIME", DEFAULT_GFX_BL_TIME);
+    k_dw_time = settings.getLong("k_dw_time", DEFAULT_K_DW_TIME);
     pump_active_pct = settings.getLong("pump_active_pct", DEFAULT_PUMP_ACTIVE_PCT);
     use_pult = settings.getBool("use_pult");
     use_pump_sensor = settings.getBool("use_pump_sensor");
     lora = settings.getBool("lora");
-    esp_now = settings.getBool("esp_now");
+    esp_now = settings.getBool("esp_now", true);
     plant_food = settings.getBool("plant_food");
 
     settings.getBytes("dw_time", dw_time, sizeof(dw_time));

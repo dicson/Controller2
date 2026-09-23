@@ -402,9 +402,7 @@ void pump_control_tick()
     if (!plant_food || !now_pumping || current_zone < 0 || current_zone >= PUMP_AMOUNT)
     {
         if (pump_water_state)
-        {
             pump_off();
-        }
         return;
     }
 
@@ -412,9 +410,7 @@ void pump_control_tick()
     if (total_t == 0)
     {
         if (pump_water_state)
-        {
             pump_off();
-        }
         return;
     }
 
@@ -428,16 +424,12 @@ void pump_control_tick()
     if (elapsed >= start_offset && elapsed < (start_offset + active_duration))
     {
         if (!pump_water_state)
-        {
             pump_on();
-        }
     }
     else
     {
         if (pump_water_state)
-        {
             pump_off();
-        }
     }
 }
 
@@ -484,16 +476,12 @@ bool update_tank_sensor_debounced()
     bool currentState = digitalRead(limitSwitchPin);
 
     if (currentState != lastState)
-    {
         lastDebounceTime = millis();
-    }
 
     if ((millis() - lastDebounceTime) > debounceDelay)
     {
         if (currentState != stableState)
-        {
             stableState = currentState;
-        }
     }
 
     lastState = currentState;
