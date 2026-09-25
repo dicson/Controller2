@@ -18,11 +18,57 @@ bool tank_empty = true;
 float pump_sensor = 0;
 uint32_t program_pause_timer;
 TaskHandle_t pultTaskHandle = NULL;
-const int limitSwitchPin = 18;          // Ваш пин, куда подключен OUT модуля
-const unsigned long debounceDelay = 50; // Время фильтрации (мс)
 extern LGFX lcd;
 
 void send_message_to_pult(void *pvParameters);
+
+/**
+ * @brief Callback-функция анимации для изменения прозрачности объекта LVGL.
+ * @param var Указатель на объект LVGL.
+ * @param v Текущее значение прозрачности.
+ */
+static void anim_opa_cb(void *var, int32_t v)
+{
+    lv_obj_set_style_opa((lv_obj_t *)var, (lv_opa_t)v, LV_PART_MAIN);
+}
+
+/**
+ * @brief Включает или выключает мигающую анимацию индикатора пустого бака.
+ * @param enable Флаг включения (true) или выключения (false) анимации.
+ */
+void set_tank_empty_animation(bool enable)
+{
+    static bool enabled = false;
+    if (enable)
+    {
+        if (!enabled)
+        {
+            lv_obj_set_hidden(objects.tank_empty, false);
+
+            lv_anim_t a;
+            lv_anim_init(&a);
+            lv_anim_set_var(&a, objects.tank_empty);
+            lv_anim_set_exec_cb(&a, anim_opa_cb);
+            lv_anim_set_values(&a, LV_OPA_COVER, LV_OPA_30);       // От 100% до 30% видимости
+            lv_anim_set_duration(&a, 600);                         // 600мс затухание
+            lv_anim_set_playback_duration(&a, 600);                // 600мс возврат
+            lv_anim_set_repeat_count(&a, LV_ANIM_REPEAT_INFINITE); // Бесконечно
+
+            lv_anim_start(&a);
+            enabled = true;
+        }
+    }
+    else
+    {
+        if (enabled)
+        {
+            lv_anim_del(objects.tank_empty, NULL); // Останавливаем анимацию
+            lv_obj_set_style_opa(objects.tank_empty, LV_OPA_COVER, LV_PART_MAIN);
+            lv_obj_set_hidden(objects.tank_empty, true);
+            enabled = false;
+        }
+    }
+}
 
 /**
  * @brief Выводит текстовое сообщение в последовательный порт.
@@ -91,8 +137,8 @@ void pump_setup()
     xTaskCreatePinnedToCore(send_message_to_pult /*Функция задачи*/, "SendMessagesToPult" /* Имя*/,
                             2048 /*Размер стека*/, NULL /*Параметры*/, 1 /*Приоритет*/, &pultTaskHandle /*Дескриптор задачи*/, 0);
     // Включаем внутренний подтягивающий резистор ESP32 к 3.3V
-    pinMode(limitSwitchPin, INPUT_PULLUP);
-    tank_empty = digitalRead(limitSwitchPin);
+    pinMode(LIMIT_SWITCH_PIN, INPUT_PULLUP);
+    tank_empty = digitalRead(LIMIT_SWITCH_PIN);
     if (tank_empty)
         lv_obj_set_hidden(objects.tank_empty, false);
 }
@@ -473,12 +519,12 @@ bool update_tank_sensor_debounced()
     static bool stableState = HIGH;
     static unsigned long lastDebounceTime = 0;
 
-    bool currentState = digitalRead(limitSwitchPin);
+    bool currentState = digitalRead(LIMIT_SWITCH_PIN);
 
     if (currentState != lastState)
         lastDebounceTime = millis();
 
-    if ((millis() - lastDebounceTime) > debounceDelay)
+    if ((millis() - lastDebounceTime) > TANK_DEBOUNCE_DELAY)
     {
         if (currentState != stableState)
             stableState = currentState;
@@ -551,7 +597,8 @@ void check_tank_sensor()
     }
 
     tank_empty = update_tank_sensor_debounced();
-    lv_obj_set_hidden(objects.tank_empty, !tank_empty);
+    set_tank_empty_animation(tank_empty);
+    // lv_obj_set_hidden(objects.tank_empty, !tank_empty);
     handle_tank_pause(tank_empty);
 }
 

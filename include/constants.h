@@ -37,5 +37,7 @@ static constexpr uint16_t SCREEN_ANIM_DURATION_MS = 1000;
 
 constexpr uint32_t ZONE_BAR_COLOR_DW = 0x0000CB; // тёмно-синий (грязная вода)
 constexpr int TIME_INPUT_INDEX{1};
+constexpr int LIMIT_SWITCH_PIN{18};              // Пин, куда подключен OUT модуля датчика бака
+constexpr unsigned long TANK_DEBOUNCE_DELAY{50}; // Время фильтрации (мс)
 constexpr const char *VERSION = "Текущая версия прошивки - 2.0";
 #endif

@@ -94,7 +94,7 @@ void fill_widgets()
         lv_obj_t *button = lv_obj_get_child(objects.zone_times, i);
         lv_obj_t *dw = lv_obj_get_child(button, 1);
         lv_obj_t *cw = lv_obj_get_child(button, 2);
-        
+
         lv_obj_set_hidden(cw, true);
         lv_label_set_text(dw, String(dw_time[i]).c_str());
         lv_obj_set_ext_click_area(dw, EXT_CLICK_AREA_SMALL);
