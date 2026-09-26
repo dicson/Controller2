@@ -7,10 +7,10 @@
 extern "C" {
 #endif
 
-// Style: 1style
-lv_style_t *get_style_1style_MAIN_DEFAULT();
-void add_style_1style(lv_obj_t *obj);
-void remove_style_1style(lv_obj_t *obj);
+// Style: button
+lv_style_t *get_style_button_MAIN_DEFAULT();
+void add_style_button(lv_obj_t *obj);
+void remove_style_button(lv_obj_t *obj);
 
 #ifdef __cplusplus
 }

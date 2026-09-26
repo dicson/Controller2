@@ -590,11 +590,11 @@ void handle_tank_pause(bool tank_is_empty)
  */
 void check_tank_sensor()
 {
-    if (lv_obj_has_state(objects.debug, LV_STATE_CHECKED))
-    {
-        tank_empty = false;
-        return;
-    }
+    // if (lv_obj_has_state(objects.debug, LV_STATE_CHECKED))
+    // {
+    //     tank_empty = false;
+    //     return;
+    // }
 
     tank_empty = update_tank_sensor_debounced();
     set_tank_empty_animation(tank_empty);

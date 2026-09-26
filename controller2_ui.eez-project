@@ -775,6 +775,7 @@
                           "checkedStateType": "literal",
                           "disabledStateType": "literal",
                           "states": "",
+                          "useStyle": "button",
                           "localStyles": {
                             "objID": "f4db5eaf-0444-4155-a4b1-f472f3678da6",
                             "definition": {
@@ -977,7 +978,7 @@
                             {
                               "objID": "93212062-1761-459f-dfec-ffd39f2f956c",
                               "type": "LVGLSwitchWidget",
-                              "left": 0,
+                              "left": 5,
                               "top": 0,
                               "width": 50,
                               "height": 25,
@@ -1017,7 +1018,15 @@
                               "disabledStateType": "literal",
                               "states": "",
                               "localStyles": {
-                                "objID": "434c85f3-9817-4c3d-9009-b64201fd655c"
+                                "objID": "434c85f3-9817-4c3d-9009-b64201fd655c",
+                                "definition": {
+                                  "MAIN": {
+                                    "DEFAULT": {
+                                      "border_color": "#ffffff",
+                                      "border_width": 1
+                                    }
+                                  }
+                                }
                               },
                               "group": "",
                               "groupIndex": 0
@@ -1092,7 +1101,7 @@
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
                               "hiddenFlag": true,
                               "hiddenFlagType": "literal",
-                              "clickableFlag": true,
+                              "clickableFlag": false,
                               "clickableFlagType": "literal",
                               "flagScrollbarMode": "",
                               "flagScrollDirection": "",
@@ -1136,7 +1145,9 @@
                               "MAIN": {
                                 "DEFAULT": {
                                   "layout": "FLEX",
-                                  "flex_track_place": "CENTER"
+                                  "flex_track_place": "CENTER",
+                                  "pad_left": 5,
+                                  "pad_column": 6
                                 }
                               }
                             }
@@ -1234,6 +1245,7 @@
                               "heightUnit": "content",
                               "children": [],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                              "hiddenFlag": false,
                               "hiddenFlagType": "literal",
                               "clickableFlagType": "literal",
                               "flagScrollbarMode": "",
@@ -1278,6 +1290,7 @@
                               "heightUnit": "px",
                               "children": [],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                              "hiddenFlag": true,
                               "hiddenFlagType": "literal",
                               "clickableFlag": true,
                               "clickableFlagType": "literal",
@@ -5367,7 +5380,7 @@
                       "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_MOMENTUM|SNAPPABLE|SCROLL_CHAIN_HOR|SCROLL_WITH_ARROW|SCROLLABLE",
                       "hiddenFlag": false,
                       "hiddenFlagType": "literal",
-                      "clickableFlag": true,
+                      "clickableFlag": false,
                       "clickableFlagType": "literal",
                       "flagScrollDirection": "",
                       "scrollSnapX": "",
@@ -5750,6 +5763,12 @@
                                   "pad_left": 5,
                                   "pad_right": 5
                                 }
+                              },
+                              "KNOB": {
+                                "DEFAULT": {
+                                  "border_color": "#FFFFFF",
+                                  "border_width": 2
+                                }
                               }
                             }
                           },
@@ -5862,8 +5881,7 @@
                             "definition": {
                               "MAIN": {
                                 "DEFAULT": {
-                                  "align": "CENTER",
-                                  "text_color": "#000000"
+                                  "align": "CENTER"
                                 }
                               }
                             }
@@ -5888,12 +5906,14 @@
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
                       "states": "",
+                      "useStyle": "",
                       "localStyles": {
                         "objID": "18cb1389-68e5-4b7a-8b55-e7c01631cf18",
                         "definition": {
                           "MAIN": {
                             "DEFAULT": {
-                              "radius": 8
+                              "radius": 8,
+                              "bg_color": "#8E2828"
                             }
                           }
                         }
@@ -5978,8 +5998,7 @@
                             "definition": {
                               "MAIN": {
                                 "DEFAULT": {
-                                  "align": "CENTER",
-                                  "text_color": "#000000"
+                                  "align": "CENTER"
                                 }
                               }
                             }
@@ -6004,12 +6023,14 @@
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
                       "states": "",
+                      "useStyle": "",
                       "localStyles": {
                         "objID": "12db20a0-83f0-41fd-cf88-e25254fd2568",
                         "definition": {
                           "MAIN": {
                             "DEFAULT": {
-                              "radius": 8
+                              "radius": 8,
+                              "bg_color": "#8E2828"
                             }
                           }
                         }
@@ -6137,8 +6158,7 @@
                             "definition": {
                               "MAIN": {
                                 "DEFAULT": {
-                                  "align": "CENTER",
-                                  "text_color": "#000000"
+                                  "align": "CENTER"
                                 }
                               }
                             }
@@ -6168,7 +6188,11 @@
                         "definition": {
                           "MAIN": {
                             "DEFAULT": {
-                              "radius": 8
+                              "radius": 8,
+                              "bg_color": "#455A64",
+                              "layout": "FLEX",
+                              "pad_left": 5,
+                              "flex_track_place": "CENTER"
                             }
                           }
                         }
@@ -6253,8 +6277,7 @@
                             "definition": {
                               "MAIN": {
                                 "DEFAULT": {
-                                  "align": "CENTER",
-                                  "text_color": "#000000"
+                                  "align": "CENTER"
                                 }
                               }
                             }
@@ -6279,12 +6302,14 @@
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
                       "states": "",
+                      "useStyle": "",
                       "localStyles": {
                         "objID": "9dce4951-c0bb-443c-b514-ea3a8749d07f",
                         "definition": {
                           "MAIN": {
                             "DEFAULT": {
-                              "radius": 8
+                              "radius": 8,
+                              "bg_color": "darken(#1976D2, 25%)"
                             }
                           }
                         }
@@ -6369,8 +6394,7 @@
                             "definition": {
                               "MAIN": {
                                 "DEFAULT": {
-                                  "align": "CENTER",
-                                  "text_color": "#000000"
+                                  "align": "CENTER"
                                 }
                               }
                             }
@@ -6395,12 +6419,14 @@
                       "checkedStateType": "literal",
                       "disabledStateType": "literal",
                       "states": "",
+                      "useStyle": "",
                       "localStyles": {
                         "objID": "035e4b17-46c6-405e-b62d-8ef84ea16cd9",
                         "definition": {
                           "MAIN": {
                             "DEFAULT": {
-                              "radius": 8
+                              "radius": 8,
+                              "bg_color": "darken(#1976D2, 25%)"
                             }
                           }
                         }
@@ -19708,7 +19734,7 @@
                           "type": "LVGLTabWidget",
                           "left": 0,
                           "top": 0,
-                          "width": 630,
+                          "width": 670,
                           "height": 443,
                           "customInputs": [],
                           "customOutputs": [],
@@ -20710,8 +20736,8 @@
                                   "type": "LVGLButtonWidget",
                                   "left": 0,
                                   "top": 0,
-                                  "width": 50,
-                                  "height": 44,
+                                  "width": 52,
+                                  "height": 46,
                                   "customInputs": [],
                                   "customOutputs": [],
                                   "style": {
@@ -20853,8 +20879,8 @@
                                   "type": "LVGLButtonWidget",
                                   "left": 0,
                                   "top": 0,
-                                  "width": 50,
-                                  "height": 44,
+                                  "width": 52,
+                                  "height": 46,
                                   "customInputs": [],
                                   "customOutputs": [],
                                   "style": {
@@ -21424,7 +21450,15 @@
                                   "disabledStateType": "literal",
                                   "states": "",
                                   "localStyles": {
-                                    "objID": "45eb05d8-63cf-40a8-d6b7-14b7b5ddc587"
+                                    "objID": "45eb05d8-63cf-40a8-d6b7-14b7b5ddc587",
+                                    "definition": {
+                                      "MAIN": {
+                                        "DEFAULT": {
+                                          "border_color": "ffffff",
+                                          "border_width": 1
+                                        }
+                                      }
+                                    }
                                   },
                                   "group": "",
                                   "groupIndex": 0
@@ -21527,7 +21561,7 @@
                               },
                               "group": "",
                               "groupIndex": 0,
-                              "text": "Ускоренное в 60 раз выполнение программы с игнорированием ошибок связи с реле,пультом,контроллером тока.",
+                              "text": "Ускоренное в 60 раз выполнение программы с игнорированием ошибок связи с реле.",
                               "textType": "literal",
                               "longMode": "WRAP",
                               "recolor": false,
@@ -23593,16 +23627,17 @@
     "objID": "a31bd004-35c5-b3fb-5c8b-78ea5c7693b8",
     "styles": [
       {
-        "objID": "8f33fe78-2f53-425f-c3f3-f68867a4e30c",
-        "name": "1style",
-        "forWidgetType": "LVGLPanelWidget",
+        "objID": "81c4d749-6e5b-440b-e4c9-cfa0d33fb2ac",
+        "name": "button",
+        "forWidgetType": "LVGLButtonWidget",
         "childStyles": [],
         "definition": {
-          "objID": "3e01b6e2-0548-4aae-808c-661fd95e99eb",
+          "objID": "65f9d47f-53c9-4fee-998f-98040025410f",
           "definition": {
             "MAIN": {
               "DEFAULT": {
-                "text_font": "ubuntu 20"
+                "border_color": "#ffffff",
+                "border_width": 1
               }
             }
           }
@@ -23611,7 +23646,8 @@
     ],
     "defaultStyles": {
       "LVGLPanelWidget": "1style",
-      "LVGLSliderWidget": "2"
+      "LVGLSliderWidget": "2",
+      "LVGLButtonWidget": "button"
     }
   },
   "lvglGroups": {
