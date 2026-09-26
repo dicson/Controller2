@@ -57,7 +57,7 @@ Controller2 is an automated irrigation system controller based on the ESP32-S3 (
 - **Constants:** All hardware-specific and tunable parameters are defined in `include/constants.h`.
 
 ### Git Conventions
-- **Commit Messages:** Must be written in Russian and should not use abbreviations.
+- **Commit Messages:** Must be written in Russian and should not use abbreviations. Always write detailed commit messages with comprehensive descriptions of the changes made.
 
 ### Communication Protocol
 - **ESP-NOW:** Uses packed structures (`struct_message`, `struct_message_pult`, etc.) for efficient binary transmission between the controller, relays, and the remote control.
