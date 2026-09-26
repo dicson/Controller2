@@ -85,9 +85,12 @@ void fill_widgets()
         lv_obj_add_state(objects.plant_food, LV_STATE_CHECKED);
     lv_obj_set_radio_button(objects.lora, true);
     lv_slider_set_value(objects.bl, GFX_BL_VALUE, LV_ANIM_OFF);
-    lv_textarea_set_text(objects.bl_idle, String(GFX_BL_TIME).c_str());
-    lv_textarea_set_text(objects.pause, String(water_pause).c_str());
-    lv_label_set_text(objects.k_dw_time, String(k_dw_time).c_str());
+    char buf[16];
+    snprintf(buf, sizeof(buf), "%lu", GFX_BL_TIME);
+    lv_textarea_set_text(objects.bl_idle, buf);
+    snprintf(buf, sizeof(buf), "%lu", water_pause);
+    lv_textarea_set_text(objects.pause, buf);
+    lv_label_set_text_fmt(objects.k_dw_time, "%lu", k_dw_time);
 
     for (int i = 0; i < PUMP_AMOUNT; i++)
     {
@@ -96,7 +99,7 @@ void fill_widgets()
         lv_obj_t *cw = lv_obj_get_child(button, 2);
 
         lv_obj_set_hidden(cw, true);
-        lv_label_set_text(dw, String(dw_time[i]).c_str());
+        lv_label_set_text_fmt(dw, "%lu", dw_time[i]);
         lv_obj_set_ext_click_area(dw, EXT_CLICK_AREA_SMALL);
 
         if (dw_time[i] != 0)

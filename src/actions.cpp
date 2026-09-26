@@ -24,6 +24,28 @@ extern bool is_paused, tank_empty, hand_paused;
 extern void revert_display();
 extern void program_pause();
 extern void program_resume();
+uint32_t water_num, start_time, programm_time;
+int8_t thisH, thisM, thisS;
+// Кнопка выбранной зоны (используется между action_zone_time_clicked и action_input_done)
+lv_obj_t *g_selected_zone_btn;
+
+void set_tab_clickable(lv_obj_t *tabview, bool clickable)
+{
+    // 1. Переключаем свайпы (на контенте и на самих страницах)
+    lv_obj_set_scrollable(lv_tabview_get_content(tabview), clickable);
+    // 2. Переключаем клики на кнопках панели вкладок
+    lv_obj_t *tab_bar = lv_tabview_get_tab_bar(tabview);
+    uint32_t child_count = lv_obj_get_child_count(tab_bar);
+
+    for (uint32_t i = 0; i < child_count; i++)
+    {
+        lv_obj_t *btn = lv_obj_get_child(tab_bar, i);
+        if (btn)
+        {
+            lv_obj_set_disabled(btn, !clickable);
+        }
+    }
+}
 
 template <typename T>
 void save_setting(const char *key, T value)
@@ -37,11 +59,6 @@ void save_setting(const char *key, T value)
         settings.putLong(key, value);
     settings.end();
 }
-
-uint32_t water_num, start_time, programm_time;
-int8_t thisH, thisM, thisS;
-// Кнопка выбранной зоны (используется между action_zone_time_clicked и action_input_done)
-lv_obj_t *g_selected_zone_btn;
 
 void millis_to_HMS(unsigned long ms)
 {
@@ -160,6 +177,7 @@ void action_idle_time_focused(lv_event_t *e)
 {
     lv_keyboard_set_textarea(objects.settings_kb, objects.bl_idle);
     lv_obj_set_hidden(objects.settings_kb, false);
+    set_tab_clickable(objects.settings_tv, false);
     lv_textarea_set_cursor_pos(objects.bl_idle, LV_TEXTAREA_CURSOR_LAST);
 }
 
@@ -167,12 +185,14 @@ void action_pause_released(lv_event_t *e)
 {
     lv_keyboard_set_textarea(objects.settings_kb, objects.pause);
     lv_obj_set_hidden(objects.settings_kb, false);
+    set_tab_clickable(objects.settings_tv, false);
     lv_textarea_set_cursor_pos(objects.pause, LV_TEXTAREA_CURSOR_LAST);
 }
 
 void action_pause_ready(lv_event_t *e)
 {
     lv_obj_set_hidden(objects.settings_kb, true);
+    set_tab_clickable(objects.settings_tv, true);
     const char *txt = lv_textarea_get_text(objects.pause);
     water_pause = (txt[0] == '\0') ? 0 : atol(txt);
     if (txt[0] == '\0' || water_pause < 10)
@@ -186,6 +206,7 @@ void action_pause_ready(lv_event_t *e)
 void action_idle_time_unfocused(lv_event_t *e)
 {
     lv_obj_set_hidden(objects.settings_kb, true);
+    set_tab_clickable(objects.settings_tv, true);
     const char *txt = lv_textarea_get_text(objects.bl_idle);
     GFX_BL_TIME = (txt[0] == '\0') ? MIN_GFX_BL_TIME : atol(txt);
     if (GFX_BL_TIME < MIN_GFX_BL_TIME || (txt[0] == '\0'))
