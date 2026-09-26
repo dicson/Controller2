@@ -101,7 +101,7 @@
  *  - LV_OS_SDL2
  *  - LV_OS_CUSTOM
  */
-#define LV_USE_OS LV_OS_NONE
+#define LV_USE_OS LV_OS_FREERTOS
 
 #if LV_USE_OS == LV_OS_CUSTOM
 /** Custom OS include header */
@@ -772,7 +772,7 @@
 #define LV_USE_EXT_DATA 0
 
 /** Use `float` instead of `int32_t` for coordinates and values that need sub-pixel precision. */
-#define LV_USE_FLOAT 0
+#define LV_USE_FLOAT 1
 
 /** Bind widgets to subject variables so they update automatically when the value changes. */
 #define LV_USE_OBSERVER 1
@@ -790,7 +790,7 @@
  *============================================================================*/
 
 /** Logging */
-#define LV_USE_LOG 0
+#define LV_USE_LOG 1
 
 #if LV_USE_LOG
 /** Default log verbosity
@@ -805,7 +805,7 @@
 #define LV_LOG_LEVEL LV_LOG_LEVEL_WARN
 
 /** If not set, the user needs to register a callback with lv_log_register_print_cb(). */
-#define LV_LOG_PRINTF 0
+#define LV_LOG_PRINTF 1
 
 /** Add a timestamp to each log */
 #define LV_LOG_USE_TIMESTAMP 1
