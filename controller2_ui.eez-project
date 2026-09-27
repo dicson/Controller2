@@ -1023,7 +1023,8 @@
                                   "MAIN": {
                                     "DEFAULT": {
                                       "border_color": "#ffffff",
-                                      "border_width": 1
+                                      "border_width": 1,
+                                      "border_opa": 150
                                     }
                                   }
                                 }
@@ -6103,7 +6104,15 @@
                           "disabledStateType": "literal",
                           "states": "",
                           "localStyles": {
-                            "objID": "0c94553f-e123-4b3a-e2ca-5b13774e335b"
+                            "objID": "0c94553f-e123-4b3a-e2ca-5b13774e335b",
+                            "definition": {
+                              "MAIN": {
+                                "DEFAULT": {
+                                  "img_recolor": "ffffff",
+                                  "img_recolor_opa": 255
+                                }
+                              }
+                            }
                           },
                           "group": "",
                           "groupIndex": 0,
@@ -21455,7 +21464,8 @@
                                       "MAIN": {
                                         "DEFAULT": {
                                           "border_color": "ffffff",
-                                          "border_width": 1
+                                          "border_width": 1,
+                                          "border_opa": 150
                                         }
                                       }
                                     }
