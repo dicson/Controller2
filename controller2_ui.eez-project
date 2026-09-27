@@ -5913,7 +5913,7 @@
                           "MAIN": {
                             "DEFAULT": {
                               "radius": 8,
-                              "bg_color": "#8E2828"
+                              "bg_color": "#64777E"
                             }
                           }
                         }
@@ -6030,7 +6030,7 @@
                           "MAIN": {
                             "DEFAULT": {
                               "radius": 8,
-                              "bg_color": "#8E2828"
+                              "bg_color": "#64777e"
                             }
                           }
                         }
@@ -6189,7 +6189,7 @@
                           "MAIN": {
                             "DEFAULT": {
                               "radius": 8,
-                              "bg_color": "#455A64",
+                              "bg_color": "#3E454D",
                               "layout": "FLEX",
                               "pad_left": 5,
                               "flex_track_place": "CENTER"
@@ -23637,7 +23637,9 @@
             "MAIN": {
               "DEFAULT": {
                 "border_color": "#ffffff",
-                "border_width": 1
+                "border_width": 1,
+                "radius": 8,
+                "border_opa": 150
               }
             }
           }

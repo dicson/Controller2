@@ -12,6 +12,8 @@
 void init_style_button_MAIN_DEFAULT(lv_style_t *style) {
     lv_style_set_border_color(style, lv_color_hex(0xffffff));
     lv_style_set_border_width(style, 1);
+    lv_style_set_radius(style, 8);
+    lv_style_set_border_opa(style, 150);
 };
 
 lv_style_t *get_style_button_MAIN_DEFAULT() {
