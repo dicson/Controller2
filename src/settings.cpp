@@ -1,7 +1,7 @@
 #include <lvgl.h>
 #include <Preferences.h>
 #include "constants.h"
-#include "ui/screens.h"
+#include "ui/zones.h"
 
 #define RW_MODE false
 #define RO_MODE true
@@ -91,20 +91,7 @@ void fill_widgets()
     snprintf(buf, sizeof(buf), "%lu", water_pause);
     lv_textarea_set_text(objects.pause, buf);
     lv_label_set_text_fmt(objects.k_dw_time, "%lu", k_dw_time);
-
-    for (int i = 0; i < PUMP_AMOUNT; i++)
-    {
-        lv_obj_t *button = lv_obj_get_child(objects.zone_times, i);
-        lv_obj_t *dw = lv_obj_get_child(button, 1);
-
-        lv_label_set_text_fmt(dw, "%lu", dw_time[i]);
-        lv_obj_set_ext_click_area(dw, EXT_CLICK_AREA_SMALL);
-
-        if (dw_time[i] != 0)
-            lv_obj_set_style_bg_opa(button, FULL_OPACITY, LV_PART_MAIN);
-        else
-            lv_obj_set_style_bg_opa(button, LOW_OPACITY, LV_PART_MAIN);
-    }
+    create_zones_widgets();
     update_zone_list();
 
     // Настраиваем выравнивание табов в настройках

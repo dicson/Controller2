@@ -97,14 +97,10 @@ void update_zone_list()
     for (int i = 0; i < PUMP_AMOUNT; i++)
     {
         lv_obj_t *bar = lv_obj_get_child(objects.bars_panel, i);
-        lv_obj_t *button = lv_obj_get_child(objects.tab_1, i);
-        lv_obj_t *checkbox = lv_obj_get_child(button, 1);
+        lv_obj_t *zone_button = lv_obj_get_child(objects.tab_1, i);
 
         lv_obj_set_hidden(bar, dw_time[i] == 0);
-        lv_obj_set_hidden(checkbox, dw_time[i] == 0);
-
-        bool active = dw_time[i] != 0;
-        lv_obj_set_style_bg_opa(button, active ? FULL_OPACITY : LOW_OPACITY, LV_PART_MAIN);
+        lv_obj_set_hidden(zone_button, dw_time[i] == 0);
     }
 }
 
