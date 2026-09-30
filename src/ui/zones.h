@@ -3,6 +3,7 @@
 #include "screens.h"
 #include "styles.h"
 #include "actions.h"
+#include "lv_cpp_utils.h"
 
 extern uint32_t dw_time[PUMP_AMOUNT]; // время полива грязной водой
 
@@ -13,7 +14,6 @@ void create_zone_bars()
     {
         // bar_0
         lv_obj_t *obj = lv_bar_create(parent_obj);
-        lv_obj_set_pos(obj, 136, -2);
         lv_obj_set_size(obj, 110, 19);
         lv_obj_set_hidden(obj, true);
         lv_obj_set_style_radius(obj, 3, LV_PART_INDICATOR);
@@ -23,26 +23,26 @@ void create_zone_bars()
         lv_obj_set_style_bg_color(obj, lv_color_hex(0x087343), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_bg_opa(obj, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_color(obj, lv_color_hex(0x2196f3), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_layout(obj, LV_LAYOUT_FLEX, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_flex_track_place(obj, LV_FLEX_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_flex_main_place(obj, LV_FLEX_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
         {
             lv_obj_t *parent_obj = obj;
-            {
-                lv_obj_t *obj = lv_label_create(parent_obj);
-                objects.obj1 = obj;
-                lv_obj_set_pos(obj, 20, -2);
-                lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                lv_obj_set_style_text_color(obj, lv_color_hex(0xffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
-                lv_label_set_text_fmt(obj, "ЗОНА  %d", i + 1);
-            }
+            lv_obj_t *obj = lv_label_create(parent_obj);
+            objects.obj1 = obj;
+            lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+            lv_obj_set_style_text_color(obj, lv_color_hex(0xffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_label_set_text_fmt(obj, "ЗОНА  %d", i + 1);
         }
     }
 }
+
 void create_zone_selection()
 {
     lv_obj_t *parent_obj = objects.tab_1;
     for (int i = 0; i < PUMP_AMOUNT; i++)
     {
         lv_obj_t *obj = lv_button_create(parent_obj);
-        lv_obj_set_pos(obj, -3, -8);
         lv_obj_set_size(obj, 185, 45);
         lv_obj_add_event_cb(obj, action_zone_selected, LV_EVENT_RELEASED, (void *)0);
         lv_obj_set_clickable(obj, false);
@@ -58,14 +58,12 @@ void create_zone_selection()
             lv_obj_t *parent_obj = obj;
             {
                 lv_obj_t *obj = lv_label_create(parent_obj);
-                lv_obj_set_pos(obj, 0, 0);
                 lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                 lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                 lv_label_set_text_fmt(obj, "%d", i + 1);
             }
             {
                 lv_obj_t *obj = lv_checkbox_create(parent_obj);
-                lv_obj_set_pos(obj, 112, 53);
                 lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                 lv_checkbox_set_text_static(obj, "поливать");
                 lv_obj_set_event_bubble(obj, true);
@@ -83,7 +81,6 @@ void create_zone_times_buttons()
         // zone
         lv_obj_t *obj = lv_button_create(parent_obj);
         // objects.zone1 = obj;
-        lv_obj_set_pos(obj, -12, -11);
         lv_obj_set_size(obj, 185, 45);
         lv_obj_add_event_cb(obj, action_zone_time_clicked, LV_EVENT_RELEASED, (void *)0);
         lv_obj_set_checkable(obj, false);
@@ -98,14 +95,12 @@ void create_zone_times_buttons()
             lv_obj_t *parent_obj = obj;
             {
                 lv_obj_t *obj = lv_label_create(parent_obj);
-                lv_obj_set_pos(obj, 0, 0);
                 lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                 lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                 lv_label_set_text_fmt(obj, "%d", i + 1);
             }
             {
                 lv_obj_t *obj = lv_label_create(parent_obj);
-                lv_obj_set_pos(obj, -6, -6);
                 lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                 lv_obj_set_event_bubble(obj, true);
                 lv_obj_set_clickable(obj, true);
